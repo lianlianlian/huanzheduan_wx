@@ -1,0 +1,5 @@
+<!--pages/components/navigation/index.wxml-->
+<scroll-view scroll-y='{{direction}}' scroll-x='{{!direction}}' scroll-top="{{scroll}}" scroll-left="{{scroll}}" scroll-with-animation class='nav {{direction?"vertical":"horizontal"}}'>
+    <slot name='item'></slot>
+</scroll-view>
+

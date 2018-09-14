@@ -1,0 +1,14 @@
+<!--pages/mood/index.wxml-->
+<view class='container'>
+  <view class='group list'>
+    <view class='list-title border-bottom'>心情波动图</view>
+    <canvas canvas-id="lineCanvas" disable-scroll="true" class="canvas" bindtouchstart="touchHandler"></canvas>
+  </view>
+  <view class='group list'>
+    <view class='list-title border-bottom'>心情列表</view>
+    <view class='cell'>
+      <view class='title'>2018.06.12</view>
+      <view class='right'></view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,27 @@
+/* pages/components/send-code/index.wxss */
+.input-box{
+  background: #fff;
+  border-radius: 5rpx;
+  margin: 20rpx 0;
+  padding: 20rpx 25rpx;
+}
+.flex-between{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.send-code{
+  width: 190rpx;
+  background: transparent;
+  font-size: 15px;
+  margin: 0;
+  padding: 0;
+  line-height: inherit;
+  border-left: 1px solid #ddd;
+  border-radius: 0;
+}
+.phone-number-alert{
+  color: #ff4445;
+  font-size: 13px;
+  padding: 0 20rpx;
+}

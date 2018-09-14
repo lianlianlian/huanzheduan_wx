@@ -1,0 +1,18 @@
+<!--pages/drug-record-detail/index.wxml-->
+<view class='container'>
+  <view class='cell'>
+    <view class='title'>服药种类：</view>
+    <view class='right'>药物A</view>
+  </view>
+  <view class='cell'>
+    <view class='title'>服药剂量：</view>
+    <view class='right'>
+      <view class='flex-between'><text class='note-title'>每次剂量（mg） </text><text class='note-txt'>2mg/次</text></view>
+      <view class='flex-between'><text class='note-title'>每天次数</text><text class='note-txt'> 2次</text></view>
+    </view>
+  </view>
+  <view class='cell'>
+    <view class='title'>服药时间：</view>
+    <view class='right'>中午、晚上</view>
+  </view>
+</view>

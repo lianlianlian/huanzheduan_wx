@@ -1,0 +1,21 @@
+<!--pages/post-publish/index.wxml-->
+<view class='container'>
+  <view class='group'>
+    <view class='textarea-box'>
+      <input type='text' placeholder='标题...'></input>
+    </view>
+    <view class='textarea-box'>
+      <textarea placeholder='填写内容...' maxlength="{{140}}"></textarea>
+    </view>
+    <view class='file-box'>
+      <view class='file-title'>上传图片：</view>
+      <view class='file-img-box flex'>
+        <image></image>
+        <view class='file'>+</view>
+      </view>
+    </view>
+  </view>
+  <view class='submit-box'>
+    <button class='submit-btn'>发布</button>
+  </view>
+</view>

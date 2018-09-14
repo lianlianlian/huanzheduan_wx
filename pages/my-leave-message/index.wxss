@@ -1,0 +1,6 @@
+/* pages/my-leave-message/index.wxss */
+.list{
+  padding: 0 30rpx;
+  margin-top: 120rpx;
+  background: #fff;
+}

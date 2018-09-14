@@ -1,0 +1,8 @@
+/* pages/see-doctor/index.wxss */
+.list {
+  background: #fff;
+  padding-bottom: 75rpx;
+}
+.item{
+  margin-top: 30rpx;
+}

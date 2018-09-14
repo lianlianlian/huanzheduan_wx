@@ -1,0 +1,12 @@
+/* pages/components/tab/index.wxss */
+.tab-box{
+  position: relative;
+}
+.line{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 1px;
+  background: #ccc;
+}

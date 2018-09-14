@@ -1,0 +1,14 @@
+<!--pages/components/msg-item/index.wxml-->
+<view class='item'>
+  <image src='{{item.imgurl || "../../../static/img/msg-img.png"}}' class='msg-img'></image>
+  <view class='infor'>
+    <view class='name d-o'>{{item.title}}</view>
+    <view class='browse-box flex-between'>
+      <view class='browse'>
+        <image class='ear-img' src='../../../static/img/ear-icon.png'></image>
+        <text>{{item.viewcount}}</text>
+      </view>
+      <text class='time'>{{item.regdate}}</text>
+    </view>
+  </view>
+</view>

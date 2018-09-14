@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "选择医生",
+  "usingComponents": {
+    "doctor-item": "../components/doctor-item/index"
+  }
+}

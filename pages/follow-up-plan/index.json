@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "随访计划",
+  "usingComponents": {
+    "doctor-user": "../components/doctor-user/index"
+  }
+}

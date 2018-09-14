@@ -1,0 +1,16 @@
+<!--pages/register/index.wxml-->
+<view class='container'>
+  <view class='input-box'>
+    <input type='number' placeholder='输入手机号' bindinput='inputUsername'></input>
+  </view>
+  <send-code bind:sendCode="sendCode" phone="{{form.username}}" type="{{1}}"></send-code>
+  <view class='input-box'>
+    <input type='password' placeholder='设置密码' bindinput='inputPassword'></input>
+  </view>
+  <view class='input-box'>
+    <input type='password' placeholder='确认密码' bindinput='inputAgainPassword'></input>
+  </view>
+</view>
+<view class='submit-box'>
+  <button class='submit-btn red' bindtap='submit'>下一步</button>
+</view>

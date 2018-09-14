@@ -1,0 +1,56 @@
+/* pages/components/msg-item/index.wxss */
+.item {
+  display: flex;
+  padding: 30rpx;
+  border-bottom: 1px solid #f0f0f0;
+}
+.item:last-child{
+  border-bottom: none;
+}
+.item .infor{
+  margin-left: 30rpx;
+  flex: 1;
+}
+.name{
+  font-size: 18px;
+  font-weight: bold;
+  margin: 5rpx 0;
+}
+.msg-img{
+  width: 215rpx;
+  height: 155rpx;
+  border-radius: 10rpx;
+}
+.l-o{
+  display: -webkit-box;
+  word-break: break-all;
+  overflow: hidden; 
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+.d-o{
+  display: -webkit-box;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:2;
+  overflow: hidden;
+  text-overflow:ellipsis;
+}
+.browse-box{
+  display: flex;
+  align-items: center;
+}
+.browse-box .browse{
+  font-size: 13px;
+}
+.browse-box .time{
+  margin-left: 10rpx;
+  font-size: 12px;
+  color: #adadad;
+}
+.browse-box .ear-img{
+  width: 40rpx;
+  height: 26rpx;
+  margin-right: 10rpx;
+}

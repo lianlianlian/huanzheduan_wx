@@ -1,0 +1,18 @@
+<!--pages/talk-index/index.wxml-->
+<view class='container'>
+  <view class='group top'>
+    <post></post>
+  </view>
+  <view class='group bottom'>
+    <block wx:for="{{4}}" wx:key="index">
+      <navigator url='../talk-detail/index'>
+        <post-item></post-item>
+      </navigator>
+    </block>
+  </view>
+</view>
+<navigator url='../post-publish/index' hover-class='none'>
+  <view class='pub-box'>
+    <image src='../../static/img/pub-icon.png'></image>
+  </view>
+</navigator>

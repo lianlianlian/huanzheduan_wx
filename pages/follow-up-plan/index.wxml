@@ -1,0 +1,14 @@
+<!--pages/follow-up-plan/index.wxml-->
+<view class='container'>
+  <view class='group top'>
+    <doctor-user></doctor-user>
+  </view>
+  <view class='group list-box'>
+    <view class='list-title border-bottom'>随访计划</view>
+    <block wx:for="{{3}}" wx:key="index">
+      <navigator url='../follow-up-detail/index?type=1' class='cell is-link'>
+        <view class='title'>2018.06.20 12:30</view>
+      </navigator>
+    </block>
+  </view>
+</view>

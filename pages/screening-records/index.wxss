@@ -1,0 +1,14 @@
+/* pages/screening-records/index.wxss */
+.item{
+  padding: 25rpx 30rpx;
+  border-bottom: 1px solid #f3f3f3;
+  background: #fff;
+}
+.time {
+  font-size: 15px;
+  color: #adadad;
+  margin-bottom: 10rpx;
+}
+.content {
+  font-size: 15px;
+}

@@ -1,0 +1,27 @@
+/* pages/post-publish/index.wxss */
+.file-title{
+  font-size: 15px;
+}
+.file-box{
+  background: #fff;
+  padding: 10rpx 35rpx 35rpx;
+  overflow: hidden;
+}
+.file-img-box{
+  margin: 15rpx 0;
+}
+.file-box image{
+  width: 95rpx;
+  height: 95rpx;
+  margin: 0 10rpx;
+  border: 1px solid #f3f3f3;
+}
+.file{
+  width: 95rpx;
+  height: 95rpx;
+  margin: 0 10rpx;
+  font-size: 30px;
+  text-align: center;
+  line-height: 90rpx;
+  border: 1px solid #f3f3f3;
+}

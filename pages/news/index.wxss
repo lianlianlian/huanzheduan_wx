@@ -1,0 +1,43 @@
+/* pages/news/index.wxss */
+.list {
+  margin: 110rpx 0 0 0;
+  background: #fff;
+}
+.item{
+  padding: 30rpx 35rpx;
+}
+.img-box{
+  padding: 7rpx;
+  position: relative;
+  margin-right: 20rpx;
+}
+.img-box image {
+  width: 105rpx;
+  height: 105rpx;
+  border-radius: 5rpx;
+}
+.img-box .no-flag{
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: #ff4445;
+  width: 14rpx;
+  height: 14rpx;
+  border-radius: 50%;
+}
+.i-swipeout-des-h2 .name{
+  font-size: 18px;
+  font-weight: bold;
+}
+.i-swipeout-des-h2 .time{
+  font-size: 12px;
+  color: #adadad;
+}
+.i-swipeout-des-detail{
+  font-size: 14px;
+  color: #828282;
+  overflow: hidden;
+}
+.i-swipeout-des{
+  width: 78%;
+}

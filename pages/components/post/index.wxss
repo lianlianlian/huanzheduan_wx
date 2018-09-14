@@ -1,0 +1,49 @@
+/* pages/components/post/index.wxss */
+.item{
+  padding: 30rpx 0;
+  background: #fff;
+  border-bottom: 1px solid #f3f3f3;
+}
+.item:last-of-type{
+  border-bottom: none;
+}
+.item image{
+  width: 105rpx;
+  height: 105rpx;
+  margin-right: 25rpx;
+}
+.name{
+  font-size: 18px;
+  font-weight: bold;
+}
+.number{
+  font-size: 13px;
+  color: #828282;
+}
+.name text,.infor{
+  flex: 1;
+}
+.flex{
+  display: flex;
+  align-items: center;
+}
+.flex-between{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.btn{
+  padding: 10rpx 20rpx;
+  background: #f6f6f6;
+  color: #ff4444;
+  font-size: 15px;
+  border-radius: 60rpx;
+}
+.l-o{
+  display: -webkit-box;
+  word-break: break-all;
+  overflow: hidden; 
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}

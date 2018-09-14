@@ -1,0 +1,26 @@
+<!--pages/class-mood-adjust-detail/index.wxml-->
+<view class='container'>
+  <view class='box'>
+    <view class='video-box'>
+      <video src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400" poster="{{videoDetail.imgurl}}" objectFit="cover" controls></video>
+    </view>
+    <view class='name'>{{videoDetail.title}}</view>
+    <view class='sm-infor flex-between border-bottom'>
+      <view class='browse-box flex'>
+        <view class='browse'>
+          <image class='ear-img' src='../../static/img/ear-icon.png'></image>
+          <text>{{videoDetail.viewcount}}</text>
+        </view>
+        <text class='time'>{{videoDetail.regdate}}</text>
+      </view>
+      <image src='{{videoDetail.loveflag == 0? "../../static/img/collect-icon.png":"../../static/img/collect-icon-active.png"}}' class='collect-img' bindtap='collect'></image>
+    </view>
+    <view class='intro'>
+      <view class='name-intro'>简介1</view>
+      <view class='msg-intro'>{{videoDetail.description}}</view>{{id}}
+    </view>
+  </view>
+  <view class='group box'>
+    <comment-box keyId="{{videoDetail.id}}" keytype="{{2}}"></comment-box>
+  </view>
+</view>

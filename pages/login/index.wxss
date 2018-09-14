@@ -1,0 +1,24 @@
+/* pages/login/index.wxss */
+.container{
+  padding: 45rpx 60rpx;
+}
+.input-box{
+  background: #fff;
+  border-radius: 5rpx;
+  margin: 20rpx 0;
+  padding: 20rpx 25rpx;
+}
+.input-box input{
+  flex: 1;
+}
+.ear-login{
+  width: 39rpx;
+  height: 39rpx;
+}
+.forget{
+  text-align: right;
+  font-size: 14px;
+}
+.submit-btn{
+  margin-top: 60rpx;
+}

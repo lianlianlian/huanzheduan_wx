@@ -1,0 +1,6 @@
+<!--pages/components/tab/index.wxml-->
+<view class='tab-box'>
+  <navigation data='{{data}}' bind:getIndex='getIndex' bind:scrollPosition='scrollPosition' direction="{{false}}" itemIndex='{{itemIndex}}'></navigation>
+  <view class='line' animation="{{animationData}}"></view>
+</view>
+

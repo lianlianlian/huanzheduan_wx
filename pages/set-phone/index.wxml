@@ -1,0 +1,7 @@
+<view class='container'>
+  <view class='input-box'>
+    <input type='number' placeholder='输入手机号' bindinput='inputUsername' value='{{form.username}}'></input>
+  </view>
+  <send-code bind:sendCode="sendCode" phone="{{form.username}}" type="{{type == 1? 1 : 2}}"></send-code>
+  <button class='submit-btn' bindtap='submit'>{{type == 1 ? "更换" : "下一步"}}</button>
+</view>

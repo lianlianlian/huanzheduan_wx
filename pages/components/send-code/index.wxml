@@ -1,0 +1,8 @@
+<!--pages/components/send-code/index.wxml-->
+<view>
+  <view class='input-box flex-between'>
+    <input type='number' placeholder='输入验证码' bindinput='inputCode'></input>
+    <button class='send-code' bindtap='send'>{{txt}}</button>
+  </view>
+  <view class='phone-number-alert' wx:if="{{showPhone}}">验证码已发送到{{_phone}}</view>
+</view>

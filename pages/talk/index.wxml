@@ -1,0 +1,23 @@
+<!--pages/talk/index.wxml-->
+<view class='container'>
+  <view class='search-box'>
+    <view class='search flex'>
+      <image src='../../static/img/search-icon.png'></image>
+      <input type='text' placeholder='搜帖子/搜人'></input>
+    </view>
+  </view>
+  <view class='shop-box' style="height:{{systemInfo.windowHeight - searchHeight}}px">
+    <navigation direction='true' itemIndex='{{itemIndex}}' dom="{{dom}}" id='navigation'>
+      <block wx:for="{{shopNav}}" wx:key="index">
+          <view class="itemw {{index == itemIndex?'active':''}}" data-index='{{index}}' bindtap='getIndex' slot='item'>{{item.name}}</view>
+      </block>
+    </navigation>
+    <scroll-view class='shop-list' scroll-y scroll-with-animation scroll-into-view='{{id}}' bindscroll='scroll'>
+        <block wx:for="{{3}}" wx:key="index">
+          <navigator url='../talk-index/index'>
+            <post></post>
+          </navigator>
+        </block>
+    </scroll-view>
+</view>
+</view>

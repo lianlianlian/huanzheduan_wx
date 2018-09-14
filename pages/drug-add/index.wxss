@@ -1,0 +1,41 @@
+/* pages/drug-add/index.wxss */
+.cell{
+  padding: 20rpx 30rpx;
+}
+.title{
+  font-size: 16px;
+}
+.right {
+  text-align: right;
+  color: #adadad;
+}
+.dose .item {
+  position: relative;
+  margin-right: 15rpx;
+  padding: 15rpx 70rpx;
+  font-size: 16px;
+  border: 1px solid #cfcdce;
+  border-radius: 30rpx 0 10rpx 30rpx;
+}
+/* .dose .item::after{
+  position: absolute;
+  content: "";
+  border-bottom: 10rpx solid #cfcdce;
+} */
+.dose .item.active{
+  background: #ffe056;
+}
+.time .item {
+  position: relative;
+  margin-right: 15rpx;
+  padding: 15rpx 45rpx;
+  font-size: 16px;
+  border: 1px solid #cfcdce;
+  border-radius: 30rpx 0 10rpx 30rpx;
+}
+icon{
+  position: absolute;
+  top: -20rpx;
+  right: -20rpx;
+  transform: scale(0.8)
+}

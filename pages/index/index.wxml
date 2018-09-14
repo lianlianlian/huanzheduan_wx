@@ -1,0 +1,40 @@
+<!--index.wxml-->
+<view class="container">
+  <swiper indicator-dots="{{true}}"
+    autoplay="{{true}}">
+    <block wx:for="{{adList}}" wx:key="index">
+      <swiper-item>
+        <image src="{{item.imgurl || '../../static/img/skeleton-lg.png'}}" class="slide-image" />
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class='doctor-box'>
+    <navigator url='../my-doctor/index' hover-class='none'>
+      <doctor-user isShowSection="{{true}}"></doctor-user>
+    </navigator>
+    <view class='handle-list flex-around border-top'>
+      <block wx:for="{{nav}}" wx:key="index">
+        <view class='item' data-index='{{index}}' bindtap='nav'>
+          <view class='img-box'>
+            <image src='../../static/img/home-icon-{{index + 1}}.png'></image>
+            <view class='num' wx:if="{{index === 2 && item.num > 0}}">{{item.num}}</view>
+          </view>
+          <text>{{item.name}}</text>
+        </view>
+      </block>
+    </view>
+  </view>
+  <view class='msg-box group'>
+    <view class='msg-title flex-between border-bottom is-link'>
+      <view class='name'>知识文章</view>
+      <view class='more' bindtap='more'>更多</view>
+    </view>
+    <view class='msg-list'>
+      <block wx:for="{{msgList}}" wx:key="index">
+        <navigator url='../msg-detail/index?id={{item.id}}'>
+          <msg-item item="{{item}}"></msg-item>
+        </navigator>
+      </block>
+    </view>
+  </view>
+</view>

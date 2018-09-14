@@ -1,0 +1,31 @@
+/* pages/follow-up-detail/index.wxss */
+
+.top{
+  background: #fff;
+  padding-left: 35rpx;
+}
+.bottom{
+  padding: 0 35rpx;
+  background: #fff;
+}
+.cell{
+  padding: 25rpx 0;
+}
+.cell .title{
+  font-size: 16px;
+}
+.right{
+  text-align: right;
+  color: #adadad;
+}
+.char-title{
+  margin: 0 -35rpx;
+  padding: 25rpx 35rpx 10rpx 35rpx;
+  background: #f3f3f3;
+  font-size: 16px;
+}
+.char-box{
+  padding: 25rpx 0;
+  color: #adadad;
+  height: 300rpx;
+}

@@ -1,0 +1,17 @@
+/* pages/appointment-doctor/index.wxss */
+.box {
+  background: #fff;
+  padding-bottom: 75rpx;
+}
+.list{
+  background: #fff;
+  padding: 0 35rpx;
+}
+.list-title{
+  margin-top: 20rpx;
+  padding: 20rpx 35rpx;
+  font-size: 16px;
+}
+.hospital-addr{
+  margin-bottom: 0;
+}

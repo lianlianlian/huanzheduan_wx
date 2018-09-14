@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "随访记录",
+  "usingComponents": {
+    "doctor-item": "../components/doctor-item/index"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "消息",
+  "usingComponents": {
+    "my-tabs": "../components/my-tabs/index",
+    "i-swipeout": "../../utils/libs-components/swipeout/index"
+  }
+}

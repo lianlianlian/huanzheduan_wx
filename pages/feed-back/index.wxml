@@ -1,0 +1,9 @@
+<!--pages/feed-back/index.wxml-->
+<view class='container'>
+  <view class='textarea-box'>
+    <textarea placeholder='请提出您对我们软件的宝贵意见或建议...' maxlength="{{140}}"></textarea>
+  </view>
+  <view class='submit-box'>
+    <button class='submit-btn'>提交</button>
+  </view>
+</view>

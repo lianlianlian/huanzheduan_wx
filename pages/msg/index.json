@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "知识文章",
+  "usingComponents": {
+    "msg-item": "../components/msg-item/index",
+    "navigation": "../components/navigation/index"
+  }
+}

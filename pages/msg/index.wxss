@@ -1,0 +1,36 @@
+/* pages/msg/index.wxss */
+.list{
+  margin-top: 70rpx;
+  background: #fff;
+}
+.nav-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: #f3f3f3;
+  padding: 0 35rpx;
+}
+.nav-box .add{
+  width: 10%;
+  padding: 0 20rpx;
+  font-size: 20px;
+  font-weight: bold;
+}
+navigation{
+  width: 90%;
+}
+navigation .item{
+  display: inline-block;
+  padding: 0 25rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  font-size: 16px;
+  color: #888;
+  border-bottom: 2px solid transparent;
+}
+navigation .item.active{
+  color: #272727;
+  border-bottom: 2px solid #ffe056;
+}

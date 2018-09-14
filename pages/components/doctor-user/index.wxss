@@ -1,0 +1,58 @@
+/* pages/components/doctor-user/index.wxss */
+.doctor{
+  padding: 30rpx 0;
+}
+.doctor .infor{
+  margin-left: 30rpx;
+}
+.doctor .hospital{
+  position: relative;
+  font-size: 18px;
+  font-weight: bold;
+  padding-top: 5rpx;
+}
+.doctor .section{
+  font-size: 18px;
+}
+.doctor .name{
+  margin: 5rpx 0;
+  font-size: 15px;
+}
+.user-img{
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 50%;
+}
+.infor{
+  flex: 1;
+}
+.flex{
+  display: flex;
+  align-items: center;
+} 
+.flag{
+  margin-left: 10rpx;
+  border-radius: 35rpx;
+  background: #ffe056;
+  font-size: 13px;
+  padding: 3rpx 10rpx;
+  font-weight: normal;
+}
+.appointment-box{
+  width: 100rpx;
+}
+.call-img {
+  margin-bottom: 10rpx;
+  width: 57rpx;
+  height: 57rpx;
+}
+.status{
+  position: absolute;
+  right: 0;
+  top: 15rpx;
+  background: #535353;
+  color: #fff;
+  font-size: 12px;
+  padding: 3rpx 25rpx 3rpx 15rpx;
+  border-radius: 40rpx 0 0 40rpx;
+}

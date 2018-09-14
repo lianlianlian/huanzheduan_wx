@@ -1,0 +1,8 @@
+/* pages/components/access/index.wxss */
+.more-num{
+  text-align: right;
+  padding: 20rpx 0;
+  border-bottom: 1px solid #f0f0f0;
+  color: #006ee5;
+  font-size: 13px;
+}

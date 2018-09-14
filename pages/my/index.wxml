@@ -1,0 +1,40 @@
+<!--pages/my/index.wxml-->
+ <!-- wx:if="{{show}}" -->
+<view class='container' wx:if="{{show}}"> 
+  <view wx:if="{{id}}">
+    <view class='user flex'>
+      <image src='{{userInfo.avatar}}' bindtap='goMyInfo'></image>
+      <view class='infor' bindtap='goMyInfo'>
+        <view class='name'>{{userInfo.username}}</view>
+        <view class='sex'>{{userInfo.sex}}</view>
+      </view>
+    </view>
+    <view class='tab-nav-box flex-around'>
+      <block wx:for="{{tabNav}}" wx:key="index">
+        <view class='item' bindtap='tabNav' data-index='{{index}}'>
+          <image src='{{item.img}}'></image>
+          <view class='name'>{{item.name}}</view>
+        </view>
+      </block>
+    </view>
+  </view>
+  <view class='no-user flex-between' wx:else>
+    <view class='infor'>
+      <view class='title'>欢迎来到····</view>
+      <button class='login-btn' bindtap='login'>马上登录</button>
+    </view>
+    <image src='../../static/img/my-no-icon.png'></image>
+  </view>
+  <block wx:for="{{list}}" wx:key="index">
+    <view class='group list'>
+      <block wx:for="{{item}}" wx:key="subItem" wx:for-index="subIndex" wx:for-item="subItem">
+        <view class='cell is-link border-bottom item' data-index='{{index}}' data-subIndex='{{subIndex}}' bindtap='nav'>
+          <view class='title flex'>
+            <image src="{{subItem.img}}"></image>
+            <text>{{subItem.name}}</text>
+          </view>
+        </view>
+      </block>
+    </view>
+  </block>
+</view>

@@ -1,0 +1,70 @@
+/* pages/talk/index.wxss */
+.search-box{
+  padding: 20rpx 50rpx;
+  background: #f3f3f3;
+}
+.search{
+  padding: 5rpx;
+  background: #fff;
+  border-radius: 60rpx;
+}
+.search image{
+  width: 35rpx;
+  height: 35rpx;
+  margin: 0 15rpx;
+}
+.search input {
+  font-size: 13px;
+  flex: 1;
+}
+.shop-box{
+  display: flex; 
+}
+.shop-box navigation {
+  width: 180rpx;
+}
+.shop-box .shop-list{
+  flex: 1;
+  padding: 0 20rpx 0 30rpx;
+  background: #fff;
+  overflow: scroll;
+}
+.shop-box .title{
+  position: relative;
+  background: #fff;
+  padding: 15rpx 25rpx;
+  border-bottom: 1px solid #f4f4f4;
+}
+.shop-box .title.active{
+  position: sticky;
+}
+.shop-box .title::after{
+  content: '';
+  position: absolute;
+  width: 15rpx;
+  height: 15rpx;
+  background: #f66;
+  border-radius: 50%;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+
+}
+.shop-box .item{
+  padding: 20rpx 0;
+  border-bottom: 1px solid #f4f4f4;
+}
+
+navigation {
+  height: 100%;
+}
+
+.itemw{
+  background: #eae9e8;
+  line-height: 105rpx;
+  font-size: 13px;
+  text-align: center;
+}
+.itemw.active{
+  background: #fff;
+}

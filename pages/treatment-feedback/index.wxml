@@ -1,0 +1,17 @@
+<!--pages/treatment-feedback/index.wxml-->
+<view class='container'>
+  <view class='group top'>
+    <doctor-user></doctor-user>
+  </view>
+  <view class='group list'>
+    <view class='title'>诊断结果</view>
+    <view class='name'>轻度抑郁症</view>
+  </view>
+  <view class='group list'>
+    <view class='title'>就诊反馈</view>
+    <view class='name'>1. 诊断</view>
+    <view class='note'>轻度抑郁症</view>
+    <view class='name'>2. 治疗方式</view>
+    <view class='note'>药物治疗</view>
+  </view>
+</view>

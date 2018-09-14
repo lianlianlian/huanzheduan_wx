@@ -1,0 +1,5 @@
+<!--pages/provision/index.wxml-->
+<view class='container'>
+    <view class='msg-p'>抑郁症是精神疾病的一种，如果不及时治疗，不仅会给患者本人的精神生活带来很多痛苦，也会严重影响到患者家属的正常生活。那么抑郁症该</view>
+    <view class='msg-p'>轻度的抑郁症如何通过自我调理来恢复健康？抑郁症自我调理的方法有哪些？</view>
+</view>

@@ -1,0 +1,28 @@
+/* pages/my-publish/index.wxss */
+.list{
+  padding-top: 20rpx;
+}
+.item{
+  padding: 30rpx 35rpx;
+  background: #fff;
+}
+.item .name{
+  font-size: 18px;
+  font-weight: bold;
+}
+.item .content{
+  font-size: 13px;
+  color: #828282;
+}
+.item .mi-msg{
+  margin-top: 15rpx;
+}
+.reason {
+  background: #f6f6f6;
+  border: 1px solid #e1e1e1;
+  padding: 3rpx 10rpx;
+  border-radius: 5rpx;
+}
+.item .time{
+  margin-left: 20rpx;
+}

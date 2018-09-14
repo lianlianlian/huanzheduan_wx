@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "就诊",
+  "usingComponents": {
+    "tips-for-reminder": "../components/tips-for-reminder/index"
+  }
+}

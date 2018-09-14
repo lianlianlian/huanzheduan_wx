@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "小课堂",
+  "usingComponents": {
+    "msg-item": "../components/msg-item/index"
+  }
+}

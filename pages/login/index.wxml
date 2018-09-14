@@ -1,0 +1,18 @@
+<!--pages/login/index.wxml-->
+<view class='container'>
+  <form bindsubmit="submit">
+    <view class='input-box'>
+      <input type='number' placeholder='请输入手机号！' name="username"></input>
+    </view>
+    <view class='input-box flex-between'>
+      <input type='text' placeholder='填写密码' name="password" wx:if="{{earStatus}}" value='{{form.password}}' bindinput='inputPassword'></input>
+      <input type='password' placeholder='填写密码' name="password" wx:else value='{{form.password}}' bindinput='inputPassword'></input>
+      <image src='{{earStatus?"../../static/img/icon-ear-1.png":"../../static/img/icon-ear-2.png"}}' class='ear-login' bindtap='target'></image>
+    </view>
+    <view class='forget' bindtap='forget'>
+      忘记密码？
+    </view>
+    <button class='submit-btn' formType="submit">登录</button>
+  </form>
+</view>
+

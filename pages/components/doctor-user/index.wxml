@@ -1,0 +1,16 @@
+<!--pages/components/doctor-user/index.wxml-->
+<view class='doctor flex'>
+  <image src='../../../static/img/user.png' class='user-img'></image>
+  <view class='infor'>
+    <view class='hospital flex'>
+      <text>南山医院</text>
+      <view class='flag'>社康医生</view>
+      <view class='status' wx:if="{{isShowStatus}}">已绑定</view>
+    </view>
+    <view class='section' wx:if="{{isShowSection}}">精神科</view>
+    <view class='name'>李默宇·男·30岁</view>
+  </view>
+  <view class='appointment-box' wx:if="{{isCall}}" bindtap='call'>
+    <image src='../../../static/img/call.png' class='call-img'></image>
+  </view>
+</view>

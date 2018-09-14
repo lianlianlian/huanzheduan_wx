@@ -1,0 +1,17 @@
+<!--pages/follow-up/index.wxml-->
+<view class='container'>
+  <view class='group'>
+    <navigator url='../follow-up-plan/index' class='cell is-link'>
+      <view class='title'>随访计划</view>
+    </navigator>
+    <navigator url='../follow-up-records/index' class='cell is-link'>
+      <view class='title'>随访记录</view>
+    </navigator>
+    <navigator url='../screening-records/index' class='cell is-link'>
+      <view class='title'>筛查记录</view>
+    </navigator>
+    <navigator url='../drug-record/index' class='cell is-link'>
+      <view class='title'>服药记录</view>
+    </navigator>
+  </view>
+</view>

@@ -1,0 +1,32 @@
+/* pages/components/comment-item/index.wxss */
+.item{
+  display: flex;
+  align-content: center;
+  padding: 15rpx 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+.item .user-img {
+  width: 70rpx;
+  height: 70rpx;
+  border-radius: 50%;
+  margin-right: 15rpx;
+}
+.item .infor {
+  flex: 1;
+}
+.name-box {
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+}
+.name-box .name{
+  font-size: 13px;
+  color: #006ee5;
+}
+.name-box .name text{
+  color: #272727;
+}
+.name-box .time{
+ color: #adadad;
+ font-size: 12px;
+}

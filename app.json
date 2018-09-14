@@ -1,0 +1,95 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/mood/index",
+    "pages/mood-evaluation/index",
+    "pages/see-doctor-home/index",
+    "pages/appointment-doctor/index",
+    "pages/see-doctor/index",
+    "pages/wait-doctor/index",
+    "pages/comment-home/index",
+    "pages/msg/index",
+    "pages/msg-type/index",
+    "pages/msg-detail/index",
+    "pages/class/index",
+    "pages/class-mood-adjust-detail/index",
+    "pages/class-mood-adjust/index",
+    "pages/screening-records/index",
+    "pages/drug-record-detail/index",
+    "pages/drug-record/index",
+    "pages/drug-add/index",
+    "pages/follow-up-detail/index",
+    "pages/follow-up-records/index",
+    "pages/follow-up-plan/index",
+    "pages/follow-up/index",
+    "pages/talk/index",
+    "pages/talk-index/index",
+    "pages/talk-detail/index",
+    "pages/post-publish/index",
+    "pages/login/index",
+    "pages/register/index",
+    "pages/improve/index",
+    "pages/my/index",
+    "pages/my-infor/index",
+    "pages/my-publish/index",
+    "pages/my-concern/index",
+    "pages/my-leave-message/index",
+    "pages/my-collection/index",
+    "pages/my-doctor/index",
+    "pages/provision/index",
+    "pages/feed-back/index",
+    "pages/records/index",
+    "pages/treatment-feedback/index",
+    "pages/set/index",
+    "pages/find-password/index",
+    "pages/revise-password/index",
+    "pages/set-phone/index",
+    "pages/about/index",
+    "pages/news/index",
+    "pages/logs/logs"
+    
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarTitleText": "患者端",
+    "navigationBarBackgroundColor": "#ffe056",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#7d7d7d",
+    "selectedColor": "#2a2a2a",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "static/img/icon-1.png",
+        "selectedIconPath": "static/img/icon-1-active.png"
+      },
+      {
+        "pagePath": "pages/see-doctor-home/index",
+        "text": "看医生",
+        "iconPath": "static/img/icon-2.png",
+        "selectedIconPath": "static/img/icon-2-active.png"
+      },
+      {
+        "pagePath": "pages/class/index",
+        "text": "小课堂",
+        "iconPath": "static/img/icon-3.png",
+        "selectedIconPath": "static/img/icon-3-active.png"
+      },
+      {
+        "pagePath": "pages/talk/index",
+        "text": "聊一聊",
+        "iconPath": "static/img/icon-4.png",
+        "selectedIconPath": "static/img/icon-4-active.png"
+      },
+      {
+        "pagePath": "pages/my/index",
+        "text": "我的",
+        "iconPath": "static/img/icon-5.png",
+        "selectedIconPath": "static/img/icon-5-active.png"
+      }
+    ]
+  }
+}

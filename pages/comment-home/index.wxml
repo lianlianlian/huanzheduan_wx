@@ -1,0 +1,8 @@
+<!--pages/comment-home/index.wxml-->
+<view class='container'>
+  <view class='list group'>
+    <block wx:for="{{5}}" wx:key="index">
+      <comment-item></comment-item>
+    </block>
+  </view>
+</view>

@@ -1,0 +1,57 @@
+/* pages/my-collection/index.wxss */
+.list {
+  margin: 110rpx 0 130rpx 0;
+  background: #fff;
+} 
+.handle-box {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+.handle-box button {
+  flex: 1;
+  font-size: 17px;
+  border-radius: 0;
+  height: 110rpx;
+  text-align: center;
+  justify-content: center;
+}
+.handle-box button icon {
+  margin-right: 25rpx;
+}
+.handle-box button:first-child {
+  color: #000;
+  background: #ffe056;
+}
+.handle-box button:last-child {
+  color: #fff;
+  background: #86858c;
+}
+.video {
+  padding: 0 30rpx;
+}
+.video .item {
+  position: relative;
+  display: inline-block;
+  width: 50%;
+  margin:  25rpx 0;
+}
+post-item {
+  width: 100%;
+}
+.icon-box {
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  background: #fff;
+  margin-left: 35rpx; 
+}
+.video .icon-box {
+  position: absolute;
+  top: 150rpx;
+  left: 10rpx;
+  z-index: 10;
+  margin-left: 0;
+}

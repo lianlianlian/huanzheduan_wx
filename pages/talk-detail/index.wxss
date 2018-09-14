@@ -1,0 +1,46 @@
+/* pages/talk-detail/index.wxss */
+.group {
+  background: #fff;
+}
+.top{
+  padding: 25rpx 35rpx;
+}
+.bottom {
+  padding: 0 35rpx 20rpx;
+}
+.title{
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10rpx 0;
+}
+.reason {
+  background: #f6f6f6;
+  font-size: 13px;
+  padding: 5rpx 15rpx;
+  border: 1px solid #e0e0e0;
+  border-radius: 5rpx;
+}
+.browse-box image{
+  margin-left: 30rpx;
+}
+.people-info{
+  padding: 20rpx 0;
+}
+.people-info .name {
+  font-weight: bold;
+  font-size: 13px;
+}
+.people-info .time {
+  font-size: 12px;
+  color: #adadad;
+}
+.img{
+  width: 100%;
+  height: 280rpx;
+  margin-top: 30rpx;
+}
+.msg-p{
+  margin: 30rpx 0;
+  font-size: 16px;
+  color: #3a3a3a;
+}

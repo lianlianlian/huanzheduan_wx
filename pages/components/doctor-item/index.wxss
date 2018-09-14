@@ -1,0 +1,53 @@
+/* pages/components/doctor-item/index.wxss */
+.item{
+  padding: 20rpx 25rpx;
+  background: #f3f3f3;
+  border-radius: 5rpx;
+}
+.infor {
+  position: relative;
+  flex: 1;
+  margin-left: 25rpx;
+}
+.name{
+  margin: 15rpx 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+.section{
+  margin: 15rpx 0;
+  font-size: 15px;
+}
+.user-img{
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 50%;
+}
+.appointment-box{
+  width: 100rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 12px;
+  color: #828282;
+}
+.call-img {
+  margin-bottom: 10rpx;
+  width: 57rpx;
+  height: 57rpx;
+}
+.flex{
+  display: flex;
+  align-items: center;
+}
+.appointment-btn{
+  position: absolute;
+  top: 15rpx;
+  right: 0;
+  background: #ffe056;
+  font-size: 13px;
+  border-radius: 60rpx;
+  width: 135rpx;
+  padding: 15rpx 0;
+  text-align: center;
+}

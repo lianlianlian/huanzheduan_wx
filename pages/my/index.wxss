@@ -1,0 +1,62 @@
+/* pages/my/index.wxss */
+.user{
+  padding: 40rpx;
+  height: 244rpx; 
+  background: #ffe056;
+}
+.no-user{
+  padding: 40rpx;
+  background: #fff;
+}
+.no-user image {
+  width: 181rpx;
+  height: 152rpx;
+}
+.no-user .title{
+  font-size: 18px;
+  font-weight: bold;
+}
+.no-user .login-btn{
+  margin-top: 20rpx;
+  background: #ffe056;
+  font-size: 13px;
+  border-radius: 60rpx;
+  padding: 5rpx 20rpx;
+}
+.user image {
+  width: 165rpx;
+  height: 165rpx;
+  border-radius: 50%;
+}
+.user .infor {
+  margin-left: 25rpx;
+  flex: 1;
+}
+.user .name {
+  font-size: 18px;
+}
+.user .sex {
+  font-size: 17px;
+}
+.tab-nav-box{
+  padding: 25rpx 0;
+  background: #fff;
+}
+.tab-nav-box .item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.tab-nav-box image {
+  width: 53rpx;
+  height: 50rpx;
+  margin-bottom: 5rpx;
+}
+.list{
+  background: #fff;
+}
+.list .item .title image {
+  width: 38rpx;
+  height: 40rpx;
+  margin-right: 25rpx;
+}

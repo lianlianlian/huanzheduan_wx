@@ -1,0 +1,11 @@
+<!--pages/components/video-item/index.wxml-->
+<view class='item'>
+  <view class='video-box'>
+    <image src='{{item.imgurl}}'></image>
+    <view class='time-box flex'>
+      <image src='../../../static/img/video-icon.png'></image>
+      <text>{{item.time}}</text>
+    </view>
+  </view>
+  <view class='name d-o'>{{item.title}}</view>
+</view>

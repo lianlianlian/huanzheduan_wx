@@ -1,0 +1,19 @@
+<!--pages/class-mood-adjust/index.wxml-->
+<view class='container'>
+  <view class='list'>
+    <block wx:for="{{videoList}}" wx:key="index">
+      <navigator url='../class-mood-adjust-detail/index?id={{item.id}}'>
+        <view class='item'>
+          <view class='name d-o'>{{item.title}}</view>
+          <view class='video-box'>
+            <image src='{{item.imgurl}}'></image>
+            <view class='time-box flex'>
+              <image src='../../static/img/video-icon.png'></image>
+              <text>{{item.time}}</text>
+            </view>
+          </view>
+        </view>
+      </navigator>
+    </block>
+  </view>
+</view>

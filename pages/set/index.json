@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "设置",
+  "usingComponents": {
+    "i-modal": "../../utils/libs-components/modal/index"
+  }
+}

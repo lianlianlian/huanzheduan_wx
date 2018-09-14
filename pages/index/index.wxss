@@ -1,0 +1,43 @@
+/**index.wxss**/
+swiper{
+  height: 420rpx;
+}
+swiper image{
+  width: 100%;
+  height: 420rpx;
+}
+.doctor-box {
+  padding: 0 30rpx;
+  background: #fff;
+}
+
+.handle-list {
+  padding: 30rpx 0;
+}
+.handle-list .item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.handle-list .item .img-box{
+  position: relative;
+}
+.handle-list .item image{
+  width: 58rpx;
+  height: 58rpx;
+  margin-bottom: 10rpx;
+}
+.handle-list .item .num{
+  position: absolute;
+  top: -15rpx;
+  right: -15rpx;
+  z-index: 10;
+  width: 30rpx;
+  height: 30rpx;
+  border-radius: 50%;
+  background: #fc4747;
+  font-size: 13px;
+  text-align: center;
+  line-height: 30rpx;
+  color: #fff;
+}

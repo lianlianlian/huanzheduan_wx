@@ -1,0 +1,15 @@
+<!--pages/my-concern/index.wxml-->
+<view class='container'>
+  <view class='list'>
+    <block wx:for="{{3}}" wx:key="index">
+      <view class='item flex border-bottom'>
+        <image src='../../static/img/user.png'></image>
+        <view class='infor'>
+          <view class='name'>抑郁症病因</view>
+          <view class='content'>主帖: 2888   回帖: 3688</view>
+          <view class='btn'>取消关注</view>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

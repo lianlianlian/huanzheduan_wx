@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "我的留言",
+  "usingComponents": {
+    "my-tabs": "../components/my-tabs/index",
+    "comment-item": "../components/comment-item/index"
+  }
+}

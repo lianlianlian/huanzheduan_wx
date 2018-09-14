@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "情绪调节",
+  "usingComponents": {
+    "video-item": "../components/video-item/index"
+  }
+}

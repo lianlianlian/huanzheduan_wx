@@ -1,0 +1,27 @@
+<!--pages/msg-type/index.wxml-->
+<view class='container'>
+  <view class='group'>
+    <view class='list'>
+      <view class='title'>
+        我的分类
+        <text>点击删除以下分类</text>
+      </view>
+      <view class='list-box'>
+        <block wx:for="{{10}}" wx:key="index">
+          <view class='item'>最新</view>
+        </block>
+      </view>
+    </view>
+    <view class='list'>
+      <view class='title'>
+        分类推荐
+        <text>点击添加以下分类</text>
+      </view>
+      <view class='list-box'>
+        <block wx:for="{{10}}" wx:key="index">
+          <view class='item'>+最新</view>
+        </block>
+      </view>
+    </view>
+  </view>
+</view>

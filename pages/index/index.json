@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "患者端",
+  "usingComponents": {
+    "doctor-user": "../components/doctor-user/index",
+    "msg-item": "../components/msg-item/index"
+  }
+}

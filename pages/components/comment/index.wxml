@@ -1,0 +1,7 @@
+<!--pages/components/access/index.wxml-->
+<block wx:for="{{2}}" wx:key="index">
+  <comment-item></comment-item>
+</block>
+<view class='more-num'><text bindtap='more'>剩余221条</text></view>
+<comment-input></comment-input>
+

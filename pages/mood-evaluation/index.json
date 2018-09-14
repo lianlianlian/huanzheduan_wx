@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "introduce": "../components/introduce/index",
+    "know-agree": "../components/know-agree/index",
+    "question": "../components/question/index",
+    "suggest": "../components/suggest/index",
+    "doctor-user": "../components/doctor-user/index"
+  }
+}

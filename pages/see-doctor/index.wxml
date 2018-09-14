@@ -1,0 +1,23 @@
+<!--pages/see-doctor/index.wxml-->
+<view class='container'>
+  <view class='list'>
+    <block wx:for="{{3}}" wx:key="index">
+      <navigator url='../appointment-doctor/index' class='item'>
+        <view class='hospital flex-between'>
+          <view class='name'>南山区慢性病防治院</view>
+          <view class='distance'>3.5km</view>
+        </view>
+        <view class='hospital-infor'>
+          <view class='hospital-addr'>
+            <image src='../../static/img/icon-addr.png'></image>
+            <text>地址：南山区华明路7号南山区慢性病防治院3楼 </text>
+          </view>
+          <view class='hospital-time'>
+            <image src='../../static/img/icon-time.png'></image>
+            <text>周一周二下午，周三上午，周四下午 8：00-12:00am；2:00-5:00pm</text>
+          </view>
+        </view>
+      </navigator>
+    </block>
+  </view>
+</view>

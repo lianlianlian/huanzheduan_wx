@@ -1,0 +1,28 @@
+/* pages/components/navigation/index.wxss */
+.nav{
+  text-align: center; 
+}
+.nav .item{
+  line-height: 100rpx;
+  font-size: 12px;
+}
+
+.nav.horizontal {
+  white-space: nowrap;
+  /* background: #fff; */
+}
+.nav.horizontal .item{
+  display: inline-block; 
+  width: 20%;  
+  font-size: 14px;
+}
+.nav.vertical {
+  height: 100%;
+}
+.nav.vertical .item{
+  background: #f1f1f1;
+  border-bottom: 1px solid #ddd;
+}
+.nav.vertical .item.active{
+  background: #fff;
+}

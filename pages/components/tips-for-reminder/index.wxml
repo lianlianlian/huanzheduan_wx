@@ -1,0 +1,5 @@
+<!--pages/components/tips-for-reminder/index.wxml-->
+<view class='alert-box'>
+  <view class='title'>小贴士提醒您： </view>
+  <view class='note'>上次随访时间是2018-5-10，建议您1个月随访 一次，下次随访时间为2018-6-10</view>
+</view>

@@ -1,0 +1,48 @@
+<!--pages/components/cart-confim-box/index.wxml-->
+<!-- 底部 -->
+<view class='cart-box' wx:if="{{showShopButton}}">
+    <view class='cart-info'>
+        <view class='img-box' bindtap='showShopInfo'>
+          <image src='../../../static/img/cart.png'></image>
+          <view class='cart-num'>1</view>
+        </view>
+        <view class='shop-info'>
+            <text class='sum-price'>¥{{sumPrice}}</text>
+            <view class='fee-price'>另需要配送费: ¥4</view>
+        </view>
+    </view>
+    <view class='cart-btn' bindtap='submit'>去结算</view>
+</view>
+<!-- 遮罩 -->
+<view class='mark' wx:if="{{showShopInfo}}" bindtap='hiddenShopInfo'></view>
+<!-- 商品详情  -->
+<view class='cart-info-box {{showShopInfo?"active":""}}'>
+    <view class='title-box'>
+        <view class='title'>购物车</view>
+        <view class='clear' bindtap='clearCart'>清空</view>
+    </view>
+    <view class='list'>
+        <block wx:for="{{shopList}}" wx:key="index">
+            <view class='item'>
+                <view class='shop-info'>
+                  <view class='name'>{{item.name}}</view>
+                  <view class='size'>{{item.type}}</view>
+                  <view class='fee-time'>配送: {{item.fee}}</view>
+                </view>
+                <view class='shop-other-info'> 
+                  <view class='price'>{{item.price}}</view>
+                  <view class='x-inline-number'>
+                      <view class='btn remove' bindtap='remove' data-index='{{index}}'>-</view>
+                      <text class='input'>{{item.number}}</text>
+                      <view class='btn add' bindtap='add' data-index='{{index}}'>+</view>
+                  </view>
+                </view> 
+            </view>
+        </block>
+        <view class='other-item'>
+            <view class='name'>餐盒费</view>
+            <view class='price'>¥4</view>
+        </view> 
+    </view>
+</view>
+

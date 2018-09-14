@@ -1,0 +1,5 @@
+/* pages/comment-home/index.wxss */
+.list{
+  padding: 0 35rpx;
+  background: #fff;
+}

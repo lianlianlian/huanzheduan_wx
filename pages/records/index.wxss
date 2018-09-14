@@ -1,0 +1,5 @@
+/* pages/records/index.wxss */
+.list{
+  background: #fff;
+  padding: 0 35rpx 35rpx;
+}

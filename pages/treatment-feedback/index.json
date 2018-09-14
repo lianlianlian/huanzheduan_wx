@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "就诊反馈",
+  "usingComponents": {
+    "doctor-user": "../components/doctor-user/index"
+  }
+}

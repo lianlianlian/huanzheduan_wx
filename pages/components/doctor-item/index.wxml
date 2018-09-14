@@ -1,0 +1,13 @@
+<!--pages/components/doctor-item/index.wxml-->
+<view class='item flex my-class'>
+  <image src='../../../static/img/user.png' class='user-img' bindtap='navigator'></image>
+  <view class='infor' bindtap='navigator'>
+    <view class='name'>南山医院</view>
+    <view class='section'>神经内科·李一凡</view>
+    <view class='appointment-btn' wx:if="{{isAppointment}}">立即预约</view>
+  </view>
+  <view class='appointment-box' wx:if="{{isCall}}" bindtap='call'>
+    <image src='../../../static/img/call.png' class='call-img'></image>
+    <text>拨打电话</text>
+  </view>
+</view>

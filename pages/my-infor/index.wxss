@@ -1,0 +1,47 @@
+/* pages/my-infor/index.wxss */
+.top{
+  background: #ffe056;
+  height: 160rpx;
+}
+.user-box{
+  margin-top: -100rpx;
+  margin-bottom: 30rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.user-box image {
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 50%;
+}
+.user-box text {
+  font-size: 16px;
+}
+.box{
+  padding: 15rpx 65rpx;
+}
+.input-box{
+  margin: 20rpx 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  padding: 15rpx 25rpx;
+  border: 1px solid #cfcdce;
+  font-size: 16px;
+}
+.input-box input,.input-box picker{
+  padding-right: 25rpx;
+  flex: 1;
+  text-align: right;
+  font-size: 14px;
+  color: #828282;
+}
+.is-link::after{
+  right: 30rpx;
+}
+.submit-btn{
+  margin-top: 60rpx;
+}

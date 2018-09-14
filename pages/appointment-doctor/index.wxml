@@ -1,0 +1,20 @@
+<!--pages/appointment-doctor/index.wxml-->
+<view class='container'>
+  <view class='group box'>
+    <view class='hospital'>
+      <view class='name'>南山区慢性病防治院</view>
+    </view>
+    <view class='hospital-infor'>
+      <view class='hospital-addr'>
+        <image src='../../static/img/icon-addr.png'></image>
+        <text>地址：南山区华明路7号南山区慢性病防治院3楼 </text>
+      </view>
+    </view>
+    <view class='list-title'>可预约的医生</view>
+    <view class='list'>
+      <block wx:for="{{3}}" wx:key="index">
+        <doctor-item my-class="group" isAppointment="true"></doctor-item>
+      </block>
+    </view>
+  </view>
+</view>

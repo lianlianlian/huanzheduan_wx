@@ -1,0 +1,11 @@
+<!--pages/records/index.wxml-->
+<view class='container'>
+  <view class='group list'>
+    <block wx:for="{{3}}" wx:key="index">
+      <view class='item'>
+        <view class='order-title'>预约时间：2018.06.21 14:30</view>
+        <doctor-item isCall="{{true}}" bind:navigator="navigator"></doctor-item>
+      </view>
+    </block>
+  </view>
+</view>

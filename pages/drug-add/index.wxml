@@ -1,0 +1,38 @@
+<!--pages/drug-add/index.wxml-->
+<view class='container'>
+  <view class='group'>
+    <view class='cell'>
+      <view class='title'>服药种类*</view>
+      <view class='right'>药物A</view>
+    </view>
+    <view class='cell is-link'>
+      <view class='title'>服药剂量:每次剂量(mg)*</view>
+      <view class='right' bindtap='chooseNumber'>{{numberList[numberIndex]}}</view>
+    </view>
+    <view class='block-cell dose'>
+      <view class='block-title'>每天次数</view>
+      <view class='block-bottom flex'>
+        <block wx:for="{{3}}" wx:key="index">
+          <view class='item'>
+            一次
+            <icon type='success' color='#e34a4a'></icon>
+          </view>
+        </block>
+      </view>
+    </view>
+    <view class='block-cell time'>
+      <view class='block-title'>服药时间</view>
+      <view class='block-bottom flex'>
+        <block wx:for="{{4}}" wx:key="index">
+          <view class='item'>
+            早上
+            <icon type='success' color='#e34a4a'></icon>
+          </view>
+        </block>
+      </view>
+    </view>
+  </view>
+  <view class='submit-box'>
+    <button class='submit-btn'>添加药物</button>
+  </view>
+</view>

@@ -1,0 +1,18 @@
+/* pages/drug-record-detail/index.wxss */
+.cell{
+  align-items: inherit;
+}
+.title{
+  font-size: 16px;
+}
+.right{
+  padding: 0 50rpx 0 15rpx; 
+  color: #adadad;
+  font-size: 15px;
+}
+.note-title {
+  width: 340rpx;
+}
+.note-txt{
+  flex: 1;
+}

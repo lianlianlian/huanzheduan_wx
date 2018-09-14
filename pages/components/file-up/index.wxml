@@ -1,0 +1,4 @@
+<!--pages/components/file-up/index.wxml-->
+<view class='file'>
+  <image src='{{defaultImg || "../../../static/img/user.png"}}' bindtap='file'></image>
+</view>

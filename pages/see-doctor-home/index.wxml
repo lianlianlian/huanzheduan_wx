@@ -1,0 +1,13 @@
+<!--pages/see-doctor/index.wxml-->
+<view class='container'>
+  <view class='group'>
+    <tips-for-reminder></tips-for-reminder>
+  </view>
+  <view class='group'>
+    <block wx:for="{{list}}" wx:key="index">
+      <view class='cell is-link' data-index='{{index}}' bindtap='navgition'>
+        <view class='title'>{{item.name}}</view>
+      </view>
+    </block>
+  </view>
+</view>

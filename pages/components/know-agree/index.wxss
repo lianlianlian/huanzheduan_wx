@@ -1,0 +1,6 @@
+/* pages/components/know-agree/index.wxss */
+.msg-p{
+  margin: 30rpx 0;
+  font-size: 16px;
+  color: #3a3a3a;
+}

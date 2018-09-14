@@ -1,0 +1,15 @@
+/* pages/components/comment-input/index.wxss */
+.my-comment{
+  display: flex;
+  align-items: center;
+  padding: 10rpx 25rpx;
+  margin-top: 15rpx;
+  background: #f3f3f3;
+  border:1px solid #ccc;
+  border-radius: 5rpx;
+}
+.my-comment image {
+  width: 40rpx;
+  height: 37rpx;
+  margin-right: 10rpx;
+}

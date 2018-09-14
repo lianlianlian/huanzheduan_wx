@@ -1,0 +1,35 @@
+/* pages/follow-up-records/index.wxss */
+.nav{
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  background: #fff;
+  height: 90rpx;
+  line-height: 90rpx;
+}
+.nav .item {
+  position: relative;
+  color: #888;
+}
+.nav .item.active::after{
+  content: "";
+  position: absolute;
+  bottom: 20rpx;
+  left: 0;
+  right: 0;
+  border-bottom: 2px solid #ffe056;
+}
+
+.list{
+  background: #fff;
+  padding: 0 35rpx 35rpx;
+  margin-top: 110rpx;
+}
+.list .cell {
+   padding: 35rpx 0;
+}
+.list .cell .title{
+  font-weight: bold;
+}

@@ -1,0 +1,25 @@
+<!--pages/follow-up-records/index.wxml-->
+<view class='container'>
+  <view class='nav flex-around'>
+    <block wx:for="{{nav}}" wx:key="index">
+      <view class='item {{navIndex === index ? "active":""}}' bindtap='nav' data-index='{{index}}'>{{item.name}}</view>
+    </block>
+  </view>
+  <view class='list' wx:if="{{navIndex === 0}}">
+    <block wx:for="{{3}}" wx:key="index">
+      <view class='item'>
+        <view class='order-title'>预约时间：2018.06.21 14:30</view>
+        <navigator url='../follow-up-detail/index?type=2'>
+          <doctor-item></doctor-item>
+        </navigator>
+      </view>
+    </block>  
+  </view>
+  <view class='list' wx:else>
+    <block wx:for="{{2}}" wx:key="index">
+      <navigator url='../mood/index' class='cell'>
+        <view class='title'>PHQ-9</view>
+      </navigator>
+    </block>
+  </view>
+</view>

@@ -1,0 +1,31 @@
+<!--pages/class/index.wxml-->
+<view class='container'>
+  <view class='msg-box'>
+    <view class='msg-title border-bottom'><text class='name'>视频浏览</text></view>
+    <view class='nav flex-around'>
+      <block wx:for="{{nav}}" wx:key="index">
+        <view class='item' data-index='{{index}}' bindtap='nav'>
+          <image src='{{item.logo}}'></image>
+          <view class='name'>{{item.name}}</view>
+        </view>
+      </block>
+    </view>
+  </view>
+  <view class='msg-box group'>
+    <view class='msg-title border-bottom'><text class='name'>问卷测评</text></view>
+    <view class='msg'>您可在这里测试对抑郁症知识的掌握程度，点击开始吧</view>
+  </view>
+  <view class='msg-box group'>
+    <view class='msg-title flex-between border-bottom is-link'>
+      <view class='name'>知识文章</view>
+      <view class='more' bindtap='more'>更多</view>
+    </view>
+    <view class='msg-list'>
+      <block wx:for="{{msgList}}" wx:key="index">
+        <navigator url='../msg-detail/index?id={{item.id}}'>
+          <msg-item item="{{item}}"></msg-item>
+        </navigator>
+      </block>
+    </view>
+  </view>
+</view>

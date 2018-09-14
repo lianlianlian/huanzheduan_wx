@@ -1,0 +1,182 @@
+/* pages/components/cart-confim-box/index.wxss */
+.cart-box{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  height: 50px;
+  z-index: 10;
+}
+.cart-info{
+  flex: 1;
+  display: flex;
+  background: #666;
+  color: #fff;
+}
+.cart-info image{
+  width: 60rpx;
+  height: 60rpx;
+}
+.cart-info .img-box{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 20rpx 0 40rpx;
+  transform: translateY(-40rpx);
+  width: 120rpx;
+  height: 120rpx;
+  border: 8rpx #666 solid;
+  background: #ddd;
+  border-radius: 50%;
+}
+.cart-info .cart-num{
+  position: absolute;
+  right: -13rpx;
+  top: 5rpx;
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40rpx;
+  background: #f66;
+  font-size: 13px;
+}
+.cart-info .shop-info {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-weight: bold;
+}
+.cart-info .sum-price{
+  font-size: 18px;
+  line-height: 100%;
+}
+.cart-info .fee-price{
+  font-size: 10px;
+}
+.cart-box .cart-btn {
+  width: 250rpx;
+  line-height: 50px;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 0;
+  background: #f66;
+  color: #fff;
+}
+
+/*加减*/
+.x-inline-number{
+  display: flex;
+}
+.x-inline-number .btn{
+  width: 50rpx;
+  height: 50rpx;
+  line-height: 46rpx;
+  border-radius: 50%;
+  background: #f66;
+  font-size: 18px;
+  border: none;
+  color: #fff;
+  text-align: center;
+}
+.x-inline-number .input{
+  width: 50rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  border: none;
+  text-align: center;
+}
+
+
+.mark{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.cart-info-box{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: translateY(100%); 
+  transition: all 0.5s;
+}
+.cart-info-box.active{
+  bottom: 100rpx;
+  transform: translateY(0);
+}
+.cart-info-box .title-box{
+  display: flex;
+  justify-content: space-between;
+  padding: 20rpx 30rpx;
+  border-bottom: 1px solid #f4f4f4;
+  background: #fff;
+}
+.cart-info-box .title{
+  position: relative;
+  padding-left: 30rpx;
+}
+.cart-info-box .title::after{
+  content: "";
+  position: absolute;
+  width: 10rpx;
+  left: 0;
+  top: 10rpx;
+  bottom: 10rpx;
+  background: #ddd;
+}
+.cart-info-box .clear{
+  color: #f66;
+}
+.cart-info-box .list {
+  padding: 0 20rpx;
+  background: #fff;
+  max-height: 500rpx;
+  overflow: scroll;
+}
+.cart-info-box .item{
+  display: flex;
+  align-items: center;
+  padding: 30rpx 0;
+  border-bottom: 1px solid #f4f4f4;
+}
+.cart-info-box .shop-info{
+  flex: 1.5;
+}
+.cart-info-box .shop-other-info{
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.cart-info-box .other-item{
+  display: flex;
+  align-items: center;
+  background: #fff;
+  padding: 35rpx 0;
+}
+.cart-info-box .other-item .name{
+  flex: 1.5;
+}
+.cart-info-box .other-item .price{
+  flex: 1;
+}
+.cart-info-box .name{
+  font-size: 16px;
+  font-weight: bold;
+}
+.cart-info-box .size,.cart-info-box .fee-time{
+  font-size: 12px;
+  color: #666;
+}
+.cart-info-box .price{
+  color: #f66;
+  font-size: 16px;
+}

@@ -1,0 +1,32 @@
+/* pages/msg-type/index.wxss */
+.group{
+  background: #fff;
+  padding: 0 35rpx;
+}
+.list {
+  padding-bottom: 40rpx;
+}
+.title {
+  padding: 30rpx 0;
+  font-weight: bold;
+  font-size: 18px;
+}
+.title text {
+  font-weight: normal;
+  color: #888;
+  font-size: 14px;
+}
+
+.list-box .item {
+  width: 160rpx;
+  padding: 20rpx 0;
+  display: inline-block;
+  font-size: 15px;
+  margin: 7rpx 5rpx;
+  background: #f6f5f7;
+  border-radius: 5rpx;
+  text-align: center;
+}
+.list-box .item.active {
+  background: #ffe056;
+}

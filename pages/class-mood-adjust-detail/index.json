@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "情绪调节",
+  "usingComponents": {
+    "comment-box": "../components/comment/index"
+  }
+}

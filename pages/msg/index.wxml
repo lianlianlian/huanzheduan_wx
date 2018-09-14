@@ -1,0 +1,18 @@
+<!--pages/msg/index.wxml-->
+<view class='container'>
+  <view class='nav-box flex'>
+    <navigation direction="{{false}}">
+      <block wx:for="{{9}}" wx:key="index">
+        <view class='item' slot="item">qq{{index}}</view>
+      </block>
+    </navigation>
+    <view class='add' bindtap='add'>+</view>
+  </view>
+  <view class='list'>
+    <block wx:for="{{msgList}}" wx:key="index">
+      <navigator url='../msg-detail/index?id={{item.id}}'>
+        <msg-item item="{{item}}"></msg-item>
+      </navigator>
+    </block>
+  </view>
+</view>

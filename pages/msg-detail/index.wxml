@@ -1,0 +1,18 @@
+<!--pages/msg-detail/index.wxml-->
+<view class='container'>
+  <view class='group box'>
+    <view class='detail-top border-bottom'>
+      <view class='title'>{{msgDetail.title}}</view>
+      <view class='handle-box flex-between'>
+        <text class='time'>{{msgDetail.regdate}}</text>
+        <image src='{{msgDetail.loveflag == 0 ? "../../static/img/collect-icon.png":"../../static/img/collect-icon-active.png"}}' class='collect-img' bindtap='collect'></image>
+      </view>
+    </view>
+    <image src='../../static/img/img.png' class='img'></image> 
+    <view class='msg-p'>抑郁症是精神疾病的一种，如果不及时治疗，不仅会给患者本人的精神生活带来很多痛苦，也会严重影响到患者家属的正常生活。那么抑郁症该</view>
+    <view class='msg-p'>轻度的抑郁症如何通过自我调理来恢复健康？抑郁症自我调理的方法有哪些？</view>
+  </view>
+  <view class='group box'>
+    <comment-box></comment-box>
+  </view>
+</view>

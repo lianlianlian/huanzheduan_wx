@@ -1,0 +1,22 @@
+/* pages/treatment-feedback/index.wxss */
+.top{
+  background: #fff;
+  padding: 0 35rpx;
+}
+.list{
+  background: #fff;
+  padding: 20rpx 35rpx;
+}
+.title{
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20rpx;
+}
+.name{
+  font-size: 15px;
+}
+.note{
+  font-size: 15px;
+  color: #828282;
+  margin-bottom: 20rpx;
+}

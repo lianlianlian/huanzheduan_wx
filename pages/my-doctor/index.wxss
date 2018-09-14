@@ -1,0 +1,5 @@
+/* pages/my-doctor/index.wxss */
+.top{
+  background: #fff;
+  padding-left: 35rpx;
+}

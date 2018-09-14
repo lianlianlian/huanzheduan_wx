@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "我的医生",
+  "usingComponents": {
+    "doctor-user": "../components/doctor-user/index",
+    "tips-for-reminder": "../components/tips-for-reminder/index"
+  }
+}

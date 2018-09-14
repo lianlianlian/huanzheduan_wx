@@ -1,0 +1,11 @@
+/* pages/drug-record/index.wxss */
+.time{
+  color: #adadad;
+  font-size: 15px;
+}
+.name {
+  font-size: 15px;
+}
+.cell{
+  border-bottom: 1px solid #f3f3f3;
+}

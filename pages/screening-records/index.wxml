@@ -1,0 +1,11 @@
+<!--pages/screening-records/index.wxml-->
+<view class='container'>
+  <view class='group'>
+    <block wx:for="{{2}}" wx:key="index">
+      <view class='item'>
+        <view class='time'>2018.06.20</view>
+        <view class='content'>抑郁评估量表分数为3，建议您于1周内找社康医生 进行随访</view>
+      </view>
+    </block>
+  </view>
+</view>

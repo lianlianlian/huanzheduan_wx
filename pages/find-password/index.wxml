@@ -1,0 +1,13 @@
+<!--pages/updata-password/index.wxml-->
+<view class='container'>
+  <form bindsubmit="submit">
+    <view class='input-box'>
+      <input type='password' placeholder='设置新密码' name="password"></input>
+    </view>
+    <view class='input-box'>
+      <input type='password' placeholder='确认新密码' name="passwordAgain" maxlength='12'></input>
+    </view>
+    <view class='msg-txt'>注：密码为6—12位数字、字母或其组合</view>
+    <button class='submit-btn' formType="submit">提交</button>
+  </form>
+</view>

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "聊一聊",
+  "usingComponents": {
+    "post": "../components/post/index"
+  }
+}

@@ -1,0 +1,37 @@
+<!--pages/improve/index.wxml-->
+<view class='container'>
+  <view class='top'></view>
+  <view class='box'>
+    <view class='user-box'>
+      <!-- <image src='../../static/img/user.png'></image> -->
+      <file-up count="{{1}}"></file-up>
+    </view>
+    <form bindsubmit="submit">
+      <view class='input-box'>
+        <view class='name'>用户名</view>
+        <input type='text' placeholder='请填写' name="nickname" placeholder-class='placeholder'></input>
+      </view>
+      <view class='input-box'>
+        <view class='name'>真实姓名*</view>
+        <input type='text' placeholder='请填写' name="realname" placeholder-class='placeholder'></input>
+      </view>
+      <view class='input-box is-link'>
+        <view class='name'>出生日期*</view>
+        <picker mode="date" name="birthday" bindchange="chooseBirthday" class='{{birthday?"":"placeholder"}}'>{{birthday || '请选择'}}</picker>
+      </view>
+      <view class='input-box is-link'>
+        <view class='name'>性别*</view>
+        <input type='text' placeholder='请选择' name="sex" disabled bindtap='chooseSex' value='{{sexIndex >= 0? sexList[sexIndex] : ""}}' placeholder-class='placeholder'></input>
+      </view>
+      <view class='input-box is-link'>
+        <view class='name'>所在城市</view>
+        <picker mode="region" name="district_name" bindchange='chooseCity' class='{{city?"":"placeholder"}}'>{{city || '请选择'}}</picker>
+      </view>
+      <view class='input-box'>
+        <view class='name'>身份证号(选填)</view>
+        <input type='idcard' placeholder='请选择' name="idcard" placeholder-class='placeholder'></input>
+      </view>
+      <button class='submit-btn red' formType="submit">提交</button>
+    </form>
+  </view>
+</view>

@@ -1,0 +1,31 @@
+/* pages/components/my-tabs/index.wxss */
+.nav{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  background: #ffe056;
+  font-size: 18px;
+  height: 90rpx;
+  padding: 15rpx 0;
+  z-index: 100;
+}
+.nav .item {
+  padding: 3rpx 40rpx;
+}
+.nav .item.active{
+  background: #fff;
+  border-radius: 55rpx;
+}
+.edit-img{
+  position: absolute;
+  right: 30rpx;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 37rpx;
+  height: 35rpx;
+}

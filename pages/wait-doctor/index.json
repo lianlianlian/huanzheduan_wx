@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "待就诊",
+  "usingComponents": {
+    "doctor-item": "../components/doctor-item/index"
+  }
+}

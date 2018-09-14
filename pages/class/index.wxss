@@ -1,0 +1,17 @@
+/* pages/class/index.wxss */
+.nav{
+  padding-top: 35rpx;
+}
+.nav .item {
+  text-align: center;
+}
+.nav image {
+  width: 78rpx;
+  height: 72rpx;
+  margin-bottom: 20rpx;
+}
+.msg{
+  padding-top: 30rpx;
+  font-size: 13px;
+  color: #adadad;
+}

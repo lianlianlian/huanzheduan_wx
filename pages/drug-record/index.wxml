@@ -1,0 +1,14 @@
+<!--pages/drug-record/index.wxml-->
+<view class='container'>
+  <view class='group'>
+    <navigator url='../drug-record-detail/index' class='cell is-link'>
+      <view class='title'>
+        <view class='time'>2018.06.20</view>
+        <view class='name'>药物A</view>
+      </view>
+    </navigator>
+  </view>
+  <view class='submit-box'>
+    <button class='submit-btn' bindtap='add'>添加</button>
+  </view>
+</view>

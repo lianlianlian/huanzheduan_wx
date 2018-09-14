@@ -1,0 +1,6 @@
+<!--pages/components/alert/index.wxml-->
+<view class='mark' wx:if="{{show}}" bindtap='toggle'></view>
+<view class='l-alert {{show?"active":""}}'>
+   <!-- <slot name='content'></slot> -->
+   <view>dddd</view>
+</view>

@@ -1,0 +1,15 @@
+/* pages/provision/index.wxss */
+page {
+  height: 100%;
+}
+.container{
+  padding: 0 35rpx;
+  background: #fff;
+  height: 100%;
+  overflow: hidden;
+}
+.msg-p{
+  margin: 30rpx 0;
+  font-size: 16px;
+  color: #3a3a3a;
+}

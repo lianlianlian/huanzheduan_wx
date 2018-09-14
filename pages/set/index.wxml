@@ -1,0 +1,22 @@
+<!--pages/set/index.wxml-->
+<view class='container'>
+  <view class='group'>
+    <navigator url='../revise-password/index' class='cell is-link'>
+      <view class='title'>修改登录密码</view>
+    </navigator>
+    <navigator url='../set-phone/index?type=1' class='cell is-link'>
+      <view class='title'>更换手机号</view>
+    </navigator>
+  </view>
+  <view class='group'>
+    <navigator url='../about/index' class='cell is-link'>
+      <view class='title'>关于软件</view>
+    </navigator>
+  </view>
+  <view class='submit-box'>
+    <button class='submit-btn red' bindtap='loginOut'>退出账户</button>
+  </view>
+</view>
+<i-modal visible="{{ isShow }}" bind:ok="submit" bind:cancel="cancel">
+    <view>确定要退出账户吗？</view>
+</i-modal>

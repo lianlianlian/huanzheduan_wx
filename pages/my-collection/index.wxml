@@ -1,0 +1,44 @@
+<!--pages/my-collection/index.wxml-->
+<view class='container'>
+  <my-tabs nav="{{nav}}" bind:tabNav="tabNav" bind:edit="edit"></my-tabs>
+  <view class='list' wx:if="{{navIndex === 0}}">
+    <block wx:for="{{msgList}}" wx:key="index">
+      <view class='item flex'>
+        <view class='icon-box' wx:if="{{eidtStatus}}">
+          <icon type='success' color='{{item.edit ? "#e34a4a":"#d2d2d2"}}' class='icon' data-index='{{index}}' bindtap='itemEdit'></icon>
+        </view>
+        <msg-item item="{{item}}"></msg-item>
+      </view>
+    </block>
+  </view>
+  <view class='list video' wx:if="{{navIndex === 1}}">
+    <block wx:for="{{videoList}}" wx:key="index">
+      <view class='item flex'>
+        <view class='icon-box' wx:if="{{eidtStatus}}">
+          <icon type='success' color='{{item.edit ? "#e34a4a":"#d2d2d2"}}' data-index='{{index}}' bindtap='itemEdit'></icon>
+        </view>
+        <video-item item="{{item}}"></video-item>
+      </view>
+    </block>
+  </view>
+  <view class='list' wx:if="{{navIndex === 2}}">
+    <block wx:for="{{3}}" wx:key="index">
+      <view class='item flex'>
+        <view class='icon-box' wx:if="{{eidtStatus}}">
+          <icon type='success' color='{{item.edit ? "#e34a4a":"#d2d2d2"}}' class='icon' data-index='{{index}}' bindtap='itemEdit'></icon>
+        </view>
+        
+        <post-item item="{{item}}"></post-item>
+      </view>
+    </block>
+  </view>
+  <view class='handle-box flex' wx:if="{{eidtStatus}}">
+    <button class='flex' bindtap='allChoose'>
+      <icon type='success' color='{{allStatus ? "#e34a4a":"#d2d2d2"}}'></icon>
+      <text>全选</text>
+    </button>
+    <button class='flex' bindtap='delet'>
+      <text>删除</text>
+    </button>
+  </view>
+</view>

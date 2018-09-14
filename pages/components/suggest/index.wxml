@@ -1,0 +1,30 @@
+<!--pages/components/suggest/index.wxml-->
+<view>
+  <view class='item'>
+    <view class='title'>
+      <image src='../../../static/img/s-icon-1.png' class='title-img'></image>
+      <text>结果说明</text>
+    </view>
+    <view class='note'>
+      根据量表结果，PHQ-9=10。请到指定医院 预约就诊
+    </view>
+  </view>
+  <view class='item'>
+    <view class='title'>
+      <image src='../../../static/img/s-icon-2.png' class='title-img'></image>
+      <text>心情建议</text>
+    </view>
+    <view class='note'>
+      请您继续保持好心情，如想了解更多心理健 康知识，邀请您加入“阳光心灵”服务计划。
+    </view>
+  </view>
+  <view class='item'>
+    <view class='title'>
+      <image src='../../../static/img/s-icon-3.png' class='title-img'></image>
+      <text>随访医生</text>
+    </view>
+    <view class='note'>
+      系统根据地址为您分配就近社康随访医生
+    </view>
+  </view>
+</view>

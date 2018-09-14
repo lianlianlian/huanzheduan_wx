@@ -1,0 +1,20 @@
+/* pages/follow-up-plan/index.wxss */
+.top{
+  background: #fff;
+  padding: 0 35rpx;
+}
+.list-box{
+  padding: 0 35rpx;
+  font-weight: bold;
+  background: #fff;
+}
+.list-title{
+  padding: 25rpx 0;
+  font-size: 18px;
+}
+.cell {
+  padding: 35rpx 0;
+}
+.is-link::after{
+  right: 0;
+}
