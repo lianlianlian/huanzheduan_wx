@@ -9,8 +9,9 @@
       <input type='password' placeholder='填写密码' name="password" wx:else value='{{form.password}}' bindinput='inputPassword'></input>
       <image src='{{earStatus?"../../static/img/icon-ear-1.png":"../../static/img/icon-ear-2.png"}}' class='ear-login' bindtap='target'></image>
     </view>
-    <view class='forget' bindtap='forget'>
-      忘记密码？
+    <view class='sm-btn-box flex-between'>
+      <text bindtap='register'>去注册</text>
+      <text bindtap='forget'>忘记密码？</text>
     </view>
     <button class='submit-btn' formType="submit">登录</button>
   </form>

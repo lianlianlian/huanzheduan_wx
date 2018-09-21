@@ -21,7 +21,8 @@ Page({
       code: '',
       password: '',
       againPassword: ''
-    }
+    },
+    checked: false
   },
 
   /**
@@ -81,6 +82,13 @@ Page({
       form
     })
   },
+  agree(e) {
+    let { checked} = this.data
+
+    this.setData({
+      checked: !checked
+    })
+  },
   send() {
     const { form: { username} } = this.data
     if (!username || username == '') {
@@ -91,7 +99,8 @@ Page({
     _sendCode(this, { keytype: 1, username: this.data.form.username})
   },
   submit() {
-    const { form: { username, code, password, againPassword }, url} = this.data
+    const { form: { username, code, password, againPassword }, url, checked} = this.data
+
     if (!username || username == ''){
       func.wxUtil.showToast({ title: '请输入手机号！' })
       return false
@@ -112,8 +121,13 @@ Page({
       func.wxUtil.showToast({ title: '两次输入密码不一致！' })
       return false
     }
+    if (!checked) {
+      func.wxUtil.showToast({ title: '请先同意注册协议！' })
+      return false
+    }
+
     verifyCode({ data: { username, code}}).then(res => {
-      wx.navigateTo({
+      wx.redirectTo({
         url: `../improve/index?temp_token=${res.infor[0].temp_token}&username=${username}&password=${password}&url=${url}`
       })
     })

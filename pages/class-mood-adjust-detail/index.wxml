@@ -17,7 +17,7 @@
     </view>
     <view class='intro'>
       <view class='name-intro'>简介1</view>
-      <view class='msg-intro'>{{videoDetail.description}}</view>{{id}}
+      <view class='msg-intro'>{{videoDetail.description}}</view>
     </view>
   </view>
   <view class='group box'>

@@ -1,6 +1,7 @@
 /* pages/my-collection/index.wxss */
 .list {
-  margin: 110rpx 0 130rpx 0;
+  margin: 110rpx 0 0 0;
+  /* padding-bottom: 130rpx; */
   background: #fff;
 } 
 .handle-box {

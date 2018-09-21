@@ -1,10 +1,17 @@
 // pages/msg/index.js
 import { getMsgList, getTypeList} from '../../api/api.js';
+const { globalData} = getApp()
 
 function _getMsg(content, data) {
   getMsgList({ data }).then(res => {
+    let result = res.infor.listItems
+    let msgList = content.data.msgList
+
+    result = data.page === 0 ? result : [...msgList, ...result]
+
     content.setData({
-      msgList: res.infor.listItems
+      msgList: result,
+      page: ++ data.page
     })
   })
 }
@@ -20,6 +27,7 @@ Page({
    */
   data: {
     page: 0,
+    keytype: 0,
     msgList: []
   },
 
@@ -35,25 +43,25 @@ Page({
       url: '../msg-type/index'
     })
   },
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
   
+  /**
+   * 页面相关事件处理函数--监听用户下拉动作
+   */
+  onPullDownRefresh: function () {
+    const { keytype} = this.data
+
+    _getMsg(this, { keytype, page: 0})
   },
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-  
-  },
-  
   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-  
-  },
+    const { page, msgList, keytype } = this.data
+
+    if (msgList.length >= page * globalData.pageSize) {
+      _getMsg(this, { keytype, page})
+    }
+  }
 
 })

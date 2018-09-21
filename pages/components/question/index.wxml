@@ -1,2 +1,23 @@
 <!--pages/components/question/index.wxml-->
-<text>pages/components/question/index.wxml</text>
+<view class='item'>
+  <view class='number'>
+    <view class='value'>{{item.number}}</view>
+    <text class='type'>{{item.type}}</text>
+  </view>
+  <view class='name'>{{item.name}}</view>
+  <view class='options-box' wx:if="{{item.optionsType == 1}}">
+    <i-radio-group class="options-group" bindchange="radioChange" current="{{currentRadio}}">
+      <i-radio class='options-item' position="right" value="{{item.content}}" color='#e34a4a' wx:for="{{item.options}}" wx:key="item"></i-radio>
+    </i-radio-group>
+  </view>
+  <view class='options-box' wx:elif="{{item.optionsType == 2}}">
+    <i-checkbox-group current="{{currentCheckbox}}" bindchange="checkboxChange">
+      <i-checkbox class='options-item' position="right" value="{{item.content}}"  color='#e34a4a' wx:for="{{item.options}}" wx:key="item"></i-checkbox>
+    </i-checkbox-group>
+  </view>
+  <view class='options-box' wx:else>
+    <view class='textarea-box'>
+      <textarea placeholder='在这里填写...' bindinput='input' class='textarea'></textarea>
+    </view>
+  </view>
+</view>

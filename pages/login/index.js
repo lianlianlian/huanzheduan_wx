@@ -48,11 +48,12 @@ Page({
       // 存储用户登录态
       wx.setStorageSync('token', res.infor[0].token)
       wx.setStorageSync('userId', res.infor[0].id)
-      // 初始化修改密码态
-      globalData.isUpdataPassword = false
+      // 存储用户信息
       globalData.userInfo = res.infor[0]
       // 登陆成功重定向页面地址
       globalData.loginNavigateUrl = url
+      // 重新调用接口
+      globalData.isAgainGet = true
       // 提示
       func.wxUtil.showToast({ title: '登陆成功！' })
       // 1秒后页面跳转

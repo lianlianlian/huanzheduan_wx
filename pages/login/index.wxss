@@ -15,8 +15,8 @@
   width: 39rpx;
   height: 39rpx;
 }
-.forget{
-  text-align: right;
+.sm-btn-box{
+  padding: 0 15rpx;
   font-size: 14px;
 }
 .submit-btn{

@@ -1,12 +1,12 @@
 <!--pages/talk-index/index.wxml-->
 <view class='container'>
   <view class='group top'>
-    <post></post>
+    <post item="{{tribuneItem}}" index="0" bind:concern="concern"></post>
   </view>
   <view class='group bottom'>
     <block wx:for="{{4}}" wx:key="index">
-      <navigator url='../talk-detail/index'>
-        <post-item></post-item>
+      <navigator url='../talk-detail/index?id={{item.id}}'>
+        <post-item item="{{item}}"></post-item>
       </navigator>
     </block>
   </view>

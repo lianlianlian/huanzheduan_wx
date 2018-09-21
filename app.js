@@ -28,7 +28,7 @@ App({
     userInfo:null,
     code: null,
     systemInfo:null,
-    pageSize: null,
+    pageSize: 20,
     version: '1.0.0',
     tabBar: ['../index/index', '../see-doctor-home/index', '../class/index', '../talk/index', '../my/index'],
     loginNavigateUrl: '',   //  首次登录后，重定向页面地址

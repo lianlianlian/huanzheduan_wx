@@ -41,15 +41,15 @@ export const login = ({ userInfo = {},...data} = {}) =>
 export const http = ({ url, data = {}, method = 'POST',content, openLoading = true, loadingTxt='加载中...'} = {}) => 
     new Promise((resolve,reject) => {
       openLoading && content ? content.setData({ hidding:false , loadingTxt}) : '';
-      let token = wx.getStorageSync('token') || ''
-      let datetime = util.formatTime()
-      let sign = md5.hexMD5(DATAKEY + '|' + datetime + '|' + url)
-      let device_type = 3
-      let client_type = 1
-      data.password && Object.assign(data, { password: md5.hexMD5(DATAKEY + md5.hexMD5(data.password)) })
-      data.old_password && Object.assign(data, { old_password: md5.hexMD5(DATAKEY + md5.hexMD5(data.old_password)) })
-      data.new_password && Object.assign(data, { new_password: md5.hexMD5(DATAKEY + md5.hexMD5(data.new_password)) })
-      Object.assign(data, { datetime, device_type, client_type, sign, token})
+      // let token = wx.getStorageSync('token') || ''
+      // let datetime = util.formatTime()
+      // let sign = md5.hexMD5(DATAKEY + '|' + datetime + '|' + url)
+      // let device_type = 3
+      // let client_type = 1
+      // data.password && Object.assign(data, { password: md5.hexMD5(DATAKEY + md5.hexMD5(data.password)) })
+      // data.old_password && Object.assign(data, { old_password: md5.hexMD5(DATAKEY + md5.hexMD5(data.old_password)) })
+      // data.new_password && Object.assign(data, { new_password: md5.hexMD5(DATAKEY + md5.hexMD5(data.new_password)) })
+      // Object.assign(data, { datetime, device_type, client_type, sign, token})
       wx.request({
         url: BASEURL + url,
         data,

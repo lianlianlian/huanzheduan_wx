@@ -23,10 +23,14 @@ export const updataMsg = (data) => http({ url: 'article_favor', ...data })   // 
 export const getVideoList = (data) => http({ url: 'video_list', ...data })   // 视频列表
 export const getVideoDetail = (data) => http({ url: 'video_get', ...data })  // 视频详情
 export const updataVideo = (data) => http({ url: 'video_favor', ...data })  // 视频收藏
-export const getBlogList = (data) => http({ url: 'blog_get', ...data })   // 帖子列表
+export const getTribuneList = (data) => http({ url: 'blog_type_list', ...data })   // 论坛列表
+export const getTribuneDetail = (data) => http({ url: 'blog_type_get', ...data })   // 论坛详情
+export const getBlogList = (data) => http({ url: 'blog_list', ...data })   // 帖子列表
+export const getBlogDetail = (data) => http({ url: 'blog_get', ...data })   // 帖子详情
 export const updataBlogList = (data) => http({ url: 'blog_type_favor', ...data })   // 关注帖子
+export const addBlog = (data) => http({ url: 'blog_add', ...data })   // 发表帖子
 export const getTypeList = (data) => http({ url: 'type_list', ...data })   // 分类列表
-export const getCommentList = (data) => http({ url: 'article_comment_list', ...data })  // 评价列表
+export const getCommentList = (data) => http({ url: 'comment_list', ...data })  // 评价列表
 export const addComment = (data) => http({ url: 'comment_add', ...data })    // 添加评价
 export const protocal = (data) => http({ url: 'webview/parm/protocal', ...data })  // 协议
 export const aboutus = (data) => http({ url: 'webview/parm/aboutus', ...data })    // 关于我们

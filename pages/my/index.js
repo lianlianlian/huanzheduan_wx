@@ -78,6 +78,8 @@ Page({
     })
     // 是否修改了密码
     if (isUpdataPassword) {
+      globalData.isUpdataPassword = false
+      
       func.wxUtil.showModal({ title: '密码修改提示', content: '您的密码已修改，确定重新登陆吗？', showCancel: false }).then(res => {
         if (res.confirm) {
           wx.navigateTo({

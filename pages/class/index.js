@@ -21,27 +21,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    nav: [
-      // {
-      //   name: '情绪调节',
-      //   img: '../../static/img/c-icon-1.png',
-      //   src: '../class-mood-adjust/index'
-      // },
-      // {
-      //   name: '大咖讲座',
-      //   img: '../../static/img/c-icon-2.png',
-      //   src: ''
-      // },
-      // {
-      //   name: '睡眠训练',
-      //   img: '../../static/img/c-icon-3.png',
-      //   src: ''
-      // }, {
-      //   name: '认知矫正',
-      //   img: '../../static/img/c-icon-4.png',
-      //   src: ''
-      // }
-    ],
+    nav: [],
     msgList: []
   },
 
@@ -51,20 +31,6 @@ Page({
   onLoad: function (options) {
     _getTypeList(this, { keytype: 5})
     _getMsg(this, { keytype: 1, page: 0 })
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-  
   },
 
   nav(e) {
@@ -79,12 +45,6 @@ Page({
     wx.navigateTo({
       url: '../msg/index'
     })
-  },
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-  
   },
 
   /**

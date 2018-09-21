@@ -10,7 +10,16 @@
   <view class='input-box'>
     <input type='password' placeholder='确认密码' bindinput='inputAgainPassword'></input>
   </view>
-</view>
-<view class='submit-box'>
+  <view class='msg-txt'>注：密码为6—12位数字、字母或其组合</view>
   <button class='submit-btn red' bindtap='submit'>下一步</button>
+  <view class='agree'>
+    <checkbox-group bindchange="agree">
+      <label>
+        <checkbox checked="{{checked}}" color='#006ee5' />我同意
+      </label>
+    </checkbox-group>
+    <text>注册协议</text>
+  </view>
 </view>
+
+

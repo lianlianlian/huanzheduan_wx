@@ -1,11 +1,10 @@
-// pages/components/access/index.js
+// pages/components/comment/index.js
 import { getCommentList} from '../../../api/api.js'
 
 function _getCommentList(content, data) {
   getCommentList({data}).then(res => {
-    console.log(res)
     content.setData({
-      commentList:res
+      commentList: res.infor.listItems
     })
   })
 }
@@ -35,8 +34,10 @@ Component({
    */
   methods: {
     more() {
+      const { keyId, keytype} = this.data
+
       wx.navigateTo({
-        url: '../../../../comment-home/index'
+        url: `../../../../comment-home/index?keytype=${keytype}&keyId=${keyId}`
       })
     }
   }

@@ -1,12 +1,12 @@
 <!--pages/talk-detail/index.wxml-->
 <view class='container'>
   <view class='group top'>
-    <view class='title'>抑郁症应该如何调节？</view>
+    <view class='title'>{{item.title}}</view>
     <view class='infor flex'>
       <view class='reason'>抑郁症病因</view>
       <view class='browse-box flex'>
         <image class='ear-img' src='../../static/img/ear-icon.png'></image>
-        <text>45681</text>
+        <text>{{item.viewcount}}</text>
         <image class='common-img' src='../../static/img/icon-common-num.png'></image>
         <text>456</text>
       </view>

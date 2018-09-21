@@ -1,4 +1,9 @@
 {
   "component": true,
-  "usingComponents": {}
+  "usingComponents": {
+    "i-radio-group": "../../../utils/libs-components/radio-group/index",
+    "i-radio": "../../../utils/libs-components/radio/index",
+    "i-checkbox-group": "../../../utils/libs-components/checkbox-group/index",
+    "i-checkbox": "../../../utils/libs-components/checkbox/index"
+  }
 }

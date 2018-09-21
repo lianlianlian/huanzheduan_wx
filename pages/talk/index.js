@@ -31,6 +31,22 @@ Page({
         name: '我关注的'
       }
     ],
+    tribuneList: [
+      {
+        id: 1,
+        imgurl: '../../../static/img/user.png',
+        name: '抑郁症病因',
+        blog_count: '2888',
+        loveflag: 0
+      },
+      {
+        id: 2,
+        imgurl: '../../../static/img/user.png',
+        name: '抑郁症病因',
+        blog_count: '2888',
+        loveflag: 0
+      }
+    ],
     systemInfo: {},
     searchHeight: 0,
     itemIndex: 0
@@ -68,6 +84,22 @@ Page({
     
     this.setData({
       itemIndex: index
+    })
+  },
+  navigation(e) {
+    const { id } = e.detail
+
+    wx.navigateTo({
+      url: `../talk-index/index?id=${id}`
+    })
+  },
+  concern(e) {
+    const { index, item } = e.detail
+    let {tribuneList} = this.data
+
+    tribuneList[index] = item
+    this.setData({
+      tribuneList
     })
   }
 })

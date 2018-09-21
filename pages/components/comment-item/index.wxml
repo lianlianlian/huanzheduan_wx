@@ -1,11 +1,11 @@
 <!--pages/components/comment-item/index.wxml-->
 <view class='item'>
-  <image src='../../../static/img/user.png' class='user-img'></image>
+  <image src='{{item.avatar || "../../../static/img/user.png"}}' class='user-img'></image>
   <view class='infor'>
     <view class='name-box'>
-      <view class='name'>小土豆</view>
-      <view class='time'>2018.08.16 12:30</view>
+      <view class='name'>{{item.nickname}}</view>
+      <view class='time'>{{item.regdate}}</view>
     </view>
-    <view class='content'>我同意，非常赞同这个观点，非常赞同这个观点， 非常赞同这个观点。</view>
+    <view class='content'>{{item.content}}</view>
   </view>
 </view>

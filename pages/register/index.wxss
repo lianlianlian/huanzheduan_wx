@@ -16,3 +16,24 @@
   padding: 0;
   line-height: inherit;
 }
+.submit-btn{
+  margin-top: 170rpx;
+}
+.msg-txt{
+  padding: 0 25rpx;
+  font-size: 13px;
+  color: #adadad;
+}
+.agree{
+  margin-top: 35rpx;
+  text-align: center;
+}
+.agree checkbox-group{
+  display: inline-block;
+}
+.agree checkbox{
+  transform: scale(0.8);
+}
+.agree text{
+  color: #006ee5;
+}

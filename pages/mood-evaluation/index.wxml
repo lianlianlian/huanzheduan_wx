@@ -27,13 +27,17 @@
     <view class='mood-box-title border-bottom'>
       问卷
     </view>
-    <question></question>
+    <question item="{{question[questionIndex]}}" bind:optionsChoose="optionsChoose"></question>
   </view>
   <view class='mood-box group' wx:if="{{listIndex === 3}}">
     <suggest></suggest>
     <doctor-user></doctor-user>
   </view>
-  <view class='submit-box'>
-    <button class='submit-btn' bindtap='submit'>{{btnText}}</button>
-  </view>
+</view>
+<view class='submit-box question-btn-box clear' wx:if="{{listIndex === 2}}">
+  <button class='pre sm-btn' wx:if="{{questionIndex > 0}}" bindtap="pre"><text decode="true">&lt;&lt;</text> 上一题</button>
+  <button class='next sm-btn' bindtap='next' wx:if="{{questionIndex < question.length - 1}}">下一题 <text decode="true">&gt;&gt;</text></button>
+</view>
+<view class='submit-box' wx:else>
+  <button class='submit-btn' bindtap='submit'>{{btnText}}</button>
 </view>

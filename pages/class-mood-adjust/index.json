@@ -1,5 +1,6 @@
 {
   "navigationBarTitleText": "情绪调节",
+  "enablePullDownRefresh": true,
   "usingComponents": {
     "video-item": "../components/video-item/index"
   }

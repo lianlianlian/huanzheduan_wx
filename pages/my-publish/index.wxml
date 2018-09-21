@@ -2,20 +2,22 @@
 <view class='constainer'>
   <view class='list'>
     <block wx:for="{{5}}" wx:key="index">
-      <view class='item border-bottom'>
-        <view class='name l-o'>抑郁症应该如何调节？</view>
-        <view class='content'>问题描述问题描述</view>
-        <view class='mi-msg flex-between'>
-          <view class='reason'>抑郁症病因</view>
-          <view class='browse-box flex'>
-            <view class='browse'>
-              <image class='ear-img' src='../../static/img/ear-icon.png'></image>
-              <text>45681</text>
+      <navigator url='../talk-detail/index?id={{item.id}}'>
+        <view class='item border-bottom'>
+          <view class='name l-o'>抑郁症应该如何调节？</view>
+          <view class='content'>问题描述问题描述</view>
+          <view class='mi-msg flex-between'>
+            <view class='reason'>抑郁症病因</view>
+            <view class='browse-box flex'>
+              <view class='browse'>
+                <image class='ear-img' src='../../static/img/ear-icon.png'></image>
+                <text>45681</text>
+              </view>
+              <text class='time'>2018.08.16 12:30</text>
             </view>
-            <text class='time'>2018.08.16 12:30</text>
           </view>
         </view>
-      </view>
+      </navigator>
     </block>
   </view>
 </view>

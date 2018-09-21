@@ -1,11 +1,11 @@
 <!--pages/components/post/index.wxml-->
-<view class='item flex'>
-  <image src='../../../static/img/user.png'></image>
+<view class='item flex-between'>
+  <image src='{{item.imgurl}}' bindtap='navigation'></image>
   <view class='infor'>
-    <view class='name flex-between'>
-      <text class='l-o'>抑郁症病因</text>
-      <view class='btn'>+ 关注</view>
+    <view class='name flex'>
+      <view class='l-o text' bindtap='navigation'>{{item.name}}</view>
+      <view class='btn {{item.loveflag == 0? "" : "active"}}' bindtap='concern'>{{item.loveflag == 0? "+ 关注":"取消关注"}}</view>
     </view>
-    <view class='number'>主帖: 2888   回帖: 3688</view>
+    <view class='number' bindtap='navigation'>主帖: {{item.blog_count}}   回帖: {{item.blog_count}}</view>
   </view>
 </view>

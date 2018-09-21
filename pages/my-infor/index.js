@@ -1,12 +1,16 @@
 // pages/my-infor/index.js
-const { globalData } = getApp()
+const { globalData, func} = getApp()
 import { updataUser} from '../../api/api.js'
 
 function _updataUser(content, data) {
   updataUser({data}).then(res => {
     globalData.userInfo = { ...globalData.userInfo, ...data}
-    wx.switchTab({
-      url: '../my/index'
+    func.wxUtil.showToast({ title: '保存成功！' })
+
+    setTimeout(() => {
+      wx.switchTab({
+        url: '../my/index'
+      })
     })
   })
 }

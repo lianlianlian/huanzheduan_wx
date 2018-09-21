@@ -4,16 +4,24 @@ import { getMsgList, getVideoList} from '../../api/api.js'
 // 收藏文章列表
 function _getMsg(content, data) {
   getMsgList({ data }).then(res => {
+    let { isFirst} = content.data
+
+    isFirst[0] = false
     content.setData({
-      msgList: res.infor.listItems
+      msgList: res.infor.listItems,
+      isFirst
     })
   })
 }
 // 收藏视频列表
 function _getVideoList(content, data) {
   getVideoList({data}).then(res => {
+    let { isFirst } = content.data
+
+    isFirst[1] = false
     content.setData({
-      videoList: res.infor.listItems
+      videoList: res.infor.listItems,
+      isFirst
     })
   })
 }
@@ -35,7 +43,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    _getMsg(this, { keytype: 2, page: 0 })
+    _getMsg(this, { keytype: -1, clienttype: 1, page: 0 })
   },
 
   /**
@@ -53,12 +61,14 @@ Page({
   },
   tabNav(e) {
     const index = e.detail
+    const { isFirst} = this.data
 
     this.setData({
       navIndex: index
     })
-
-    index == 0 ? _getMsg(this, { keytype: 2, clienttype: 1, page: 0 }) : index == 1 ? _getVideoList(this, { type_id: 1, page: 0 }) : null
+    if (isFirst[index]) {
+      index == 0 ? _getMsg(this, { keytype: -1, clienttype: 1, page: 0 }) : index == 1 ? _getVideoList(this, { type_id: -1, page: 0 }) : null
+    }
     
   },
   edit(e) {
@@ -71,27 +81,38 @@ Page({
     })
 
   },
+  // 选择某项
   itemEdit(e) {
     const { index } = e.currentTarget.dataset
-    const { navIndex, msgList, videoList, cardList} = this.data
+    let { navIndex, msgList, videoList, cardList, allStatus} = this.data
 
     if (navIndex == 0) {
       msgList[index].edit = !msgList[index].edit;
+      allStatus = msgList.every((item, index) => item.edit)
+
       this.setData({
-        msgList
+        msgList,
+        allStatus
       })
     } else if (navIndex == 1) {
       videoList[index].edit = !videoList[index].edit;
+      allStatus = videoList.every((item, index) => item.edit)
+
       this.setData({
-        videoList
+        videoList,
+        allStatus
       })
     } else if (navIndex == 2) {
       cardList[index].edit = !cardList[index].edit;
+      allStatus = cardList.every((item, index) => item.edit)
+
       this.setData({
-        cardList
+        cardList,
+        allStatus
       })
     }
   },
+  // 点击全选
   allChoose() {
     let { navIndex, msgList, videoList, cardList, allStatus} = this.data
     allStatus = !allStatus
@@ -116,19 +137,20 @@ Page({
       })
     }
   },
+  // 点击删除
   delet() {
     const { navIndex, msgList, videoList, cardList } = this.data
-    let idList = []
+    let idList = ''
 
     func.wxUtil.showModal({ title: '删除提示', content: navIndex == 0 ? '确定要删除所选文章吗？' : navIndex == 1 ? '确定要删除所选视频吗？' : '确定要删除所选帖子吗？'}).then(res => {
 
       if (res.confirm) {
         if (navIndex == 0) {
-          idList = msgList.filter((item, index) => item == true)
+          idList = msgList.reduce((arr, item) => {item.edit? arr.push(item.id) : null; return arr}, []).join(',')
         } else if (navIndex == 1) {
-          idList = videoList.filter((item, index) => item == true)
+          idList = videoList.reduce((arr, item) => { item.edit ? arr.push(item.id) : null; return arr }, []).join(',')
         } else if (navIndex == 2) {
-          idList = cardList.filter((item, index) => item == true)
+          idList = cardList.reduce((arr, item) => { item.edit ? arr.push(item.id) : null; return arr }, []).join(',')
         }
         console.log(idList)
       }

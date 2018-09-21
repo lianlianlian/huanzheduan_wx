@@ -1,7 +1,14 @@
 <!--pages/components/access/index.wxml-->
-<block wx:for="{{2}}" wx:key="index">
-  <comment-item></comment-item>
-</block>
-<view class='more-num'><text bindtap='more'>剩余221条</text></view>
+<view class='list'>
+  <block wx:for="{{commentList}}" wx:key="index">
+    <comment-item item="{{item}}" wx:if="{{index < 2}}"></comment-item>
+  </block>
+</view>
+<view class='list overflow-hidden' wx:if="{{commentList.length <= 0}}">
+  <view class="weui-loadmore weui-loadmore_line">
+    <view class="weui-loadmore__tips weui-loadmore__tips_in-line">暂无评价</view>
+  </view>
+</view>
+<view class='more-num'><text bindtap='more' wx:if="{{commentList.length > 2}}">剩余{{commentList.length - 2}}条</text></view>
 <comment-input></comment-input>
 

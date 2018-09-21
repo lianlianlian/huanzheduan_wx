@@ -1,4 +1,13 @@
 // pages/news/index.js
+import { getNewsList} from '../../api/api.js'
+const { } = getApp()
+function _getNewsList(content, data) {
+  getNewsList({data}).then(res => {
+    content.setData({
+      list: res.infor.listItems
+    })
+  })
+}
 Page({
 
   /**
@@ -29,14 +38,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+    _getNewsList(this, { noticetype: 1, page: 0})
   },
 
   /**

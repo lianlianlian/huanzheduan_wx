@@ -61,7 +61,27 @@ Page({
   onLoad: function (options) {
     // new app.func.WeToast();
     const id = wx.getStorageSync('userId')
-    
+    wx.request({
+      url: 'http://jcool-cloud.com:9999/auth/oauth/token',
+      data: {
+        username:'admin',
+        password:'123456',
+        grant_type:'password',
+        client_id:'jcloud',
+        client_secret:'jcloud'
+      },
+      header: {
+        "content-type": "application/x-www-form-urlencoded",
+      },
+      method: 'post',
+      dataType: 'json',
+      responseType: 'text',
+      success: function(res) {
+        console.log(res)
+      },
+      fail: function(res) {},
+      complete: function(res) {},
+    })
     _getAd(this)
     _getMsg(this, { keytype: 1, page: 0})
     // _getMyDoctor(this)
@@ -72,13 +92,24 @@ Page({
     }
   },
   onShow: function() {
+    // 解决未登录进入，先登录，后进入该页面
+    const url = globalData.loginNavigateUrl
+    // 处理登录态失效后，重新登录，获取数据
     const isAgainGet = globalData.isAgainGet
     const pageUrlStore = wx.getStorageSync('pageUrlStore')
     const pageUrl = func.wxUtil.getPages()
-
+    // 登台态失效，登录保存状态，比较失效的页面与该页面是否一致，如果符合，状态置位false，重新加载数据
     if (pageUrlStore == pageUrl && isAgainGet) {
       globalData.isAgainGet = false
       _getUnreadNumber(this)
+    }
+    // 如果存在url，则先清空保存的url，然后页面跳转
+    if (url){
+      globalData.loginNavigateUrl = ''
+
+      wx.navigateTo({
+        url
+      })
     }
   },
   nav(e) {

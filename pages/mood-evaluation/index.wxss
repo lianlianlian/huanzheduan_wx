@@ -56,6 +56,26 @@
 }
 
 .submit-box{
-  margin: 50rpx 0;
-  padding: 0 65rpx;
+  padding: 50rpx 65rpx 50rpx;
+}
+.question-btn-box{
+  /* position: fixed;
+  bottom: 10rpx;
+  left: 35rpx;
+  right: 35rpx;
+  background: #f3f3f3;
+  z-index: 100; */
+  padding: 50rpx 35rpx 50rpx;
+}
+.sm-btn{
+  background: #86858c;
+  margin: 0;
+  color: #fff;
+  font-size: 17px;
+}
+.sm-btn.pre{
+  float: left;
+}
+.sm-btn.next{
+  float: right;
 }

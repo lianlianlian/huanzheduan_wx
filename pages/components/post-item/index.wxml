@@ -7,7 +7,6 @@
         <image class='ear-img' src='../../../static/img/ear-icon.png'></image>
         <text>45681</text>
       </view>
-      
       <text class='time'>2018.08.16 12:30</text>
     </view>
     <view class='grade'>时光专家</view>

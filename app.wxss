@@ -33,6 +33,13 @@ image{
   text-align: center;
   z-index: 1000;
 }
+.clear::after{
+  content: "";
+  display: block;
+  overflow: hidden;
+  height: 0;
+  clear: both;
+}
 .group{
   margin-top: 20rpx;
 }
@@ -139,7 +146,9 @@ image{
   border-bottom: 1px solid #f0f0f0;
   text-align: center;
 }
-
+.padding-0{
+  padding: 0 !important;
+}
 /*底部操作*/
 .fixed{
   position: fixed;

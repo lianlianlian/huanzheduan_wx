@@ -13,11 +13,9 @@
       </block>
     </navigation>
     <scroll-view class='shop-list' scroll-y scroll-with-animation scroll-into-view='{{id}}' bindscroll='scroll'>
-        <block wx:for="{{3}}" wx:key="index">
-          <navigator url='../talk-index/index'>
-            <post></post>
-          </navigator>
-        </block>
+      <block wx:for="{{tribuneList}}" wx:key="index">
+        <post index="{{index}}" item="{{item}}" bind:navigation="navigation" bind:concern="concern"></post>
+      </block>
     </scroll-view>
 </view>
 </view>

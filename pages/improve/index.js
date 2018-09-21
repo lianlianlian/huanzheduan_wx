@@ -92,6 +92,8 @@ Page({
         // 初始化修改密码态
         globalData.isUpdataPassword = false
         globalData.userInfo = res.infor[0]
+        // 登陆成功重定向页面地址
+        globalData.loginNavigateUrl = url
         // 提示
         func.wxUtil.showToast({ title: '登陆成功！' })
         // 1秒后页面跳转
@@ -106,9 +108,6 @@ Page({
             })
           }
         }, 1000)
-      })
-      wx.redirectTo({
-        url: '../index/index'
       })
     })
   }
