@@ -1,9 +1,9 @@
 <!--pages/msg/index.wxml-->
 <view class='container'>
   <view class='nav-box flex'>
-    <navigation direction="{{false}}">
+    <navigation direction="{{false}}" itemIndex="{{navIndex}}">
       <block wx:for="{{9}}" wx:key="index">
-        <view class='item' slot="item">qq{{index}}</view>
+        <view class='navItem' slot="item" bindtap='nav' data-index='{{index}}' dom="{{dom}}">qq{{index}}</view>
       </block>
     </navigation>
     <view class='add' bindtap='add'>+</view>

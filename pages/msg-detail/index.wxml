@@ -13,6 +13,6 @@
     <view class='msg-p'>轻度的抑郁症如何通过自我调理来恢复健康？抑郁症自我调理的方法有哪些？</view>
   </view>
   <view class='group box'>
-    <comment-box></comment-box>
+    <comment-box keyId="{{id}}" keytype="1"></comment-box>
   </view>
 </view>

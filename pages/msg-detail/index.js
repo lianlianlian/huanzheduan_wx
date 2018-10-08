@@ -5,8 +5,7 @@ const { getMsgDetail, updataMsg} = require('../../api/api.js');
 function _getMsgDetail(content, data) {
   getMsgDetail({data}).then(res => {
     content.setData({
-      msgDetail: res.infor[0],
-      id: data.article_id
+      msgDetail: res.infor[0]
     })
   })
 }
@@ -35,7 +34,12 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    _getMsgDetail(this, { article_id: options.id})
+    const {id} = options
+
+    this.setData({
+      id
+    })
+    _getMsgDetail(this, { article_id: id})
   },
 
   /**

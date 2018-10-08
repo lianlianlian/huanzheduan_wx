@@ -2,13 +2,13 @@
 <view class='container'>
   <my-tabs nav="{{nav}}" id="my-nav" bind:tabNav="tabNav"></my-tabs>
   <view class='list group' wx:if="{{navIndex == 0}}">
-    <block wx:for="{{2}}" wx:key="index">
-      <comment-item></comment-item>
+    <block wx:for="{{classList}}" wx:key="index">
+      <comment-item item="{{item}}"></comment-item>
     </block>
   </view>
   <view class='list group' wx:else>
-    <block wx:for="{{2}}" wx:key="index">
-      <comment-item></comment-item>
+    <block wx:for="{{talkList}}" wx:key="index">
+      <comment-item item="{{item}}"></comment-item>
     </block>
   </view>
 </view>

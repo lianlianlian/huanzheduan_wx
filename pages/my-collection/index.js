@@ -62,7 +62,7 @@ Page({
   tabNav(e) {
     const index = e.detail
     const { isFirst} = this.data
-
+    console.log(index)
     this.setData({
       navIndex: index
     })

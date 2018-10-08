@@ -42,6 +42,7 @@ Component({
     // dom代表所用的元素
     // direction滚动方向,false代表横向,true竖向
     navScroll(i, dom, direction) {
+      console.log(i)
       let webviewWidth = 0;
       let webviewHeight = 0;
       let width = 0;
@@ -81,8 +82,8 @@ Component({
         this.setData({
           scroll: Math.abs(scroll)
         })
-        
-        this.triggerEvent('scrollPosition', { scroll: dom[i].left })
+        console.log(wWidth)
+        // this.triggerEvent('scrollPosition', { scroll: dom[i].left })
       })  
     }
   }

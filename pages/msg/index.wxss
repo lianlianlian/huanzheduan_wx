@@ -21,7 +21,7 @@
 navigation{
   width: 90%;
 }
-navigation .item{
+navigation .navItem{
   display: inline-block;
   padding: 0 25rpx;
   height: 70rpx;
@@ -30,7 +30,7 @@ navigation .item{
   color: #888;
   border-bottom: 2px solid transparent;
 }
-navigation .item.active{
+navigation .navItem.active{
   color: #272727;
   border-bottom: 2px solid #ffe056;
 }

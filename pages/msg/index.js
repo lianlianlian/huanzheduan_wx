@@ -1,6 +1,6 @@
 // pages/msg/index.js
 import { getMsgList, getTypeList} from '../../api/api.js';
-const { globalData} = getApp()
+const { globalData, func} = getApp()
 
 function _getMsg(content, data) {
   getMsgList({ data }).then(res => {
@@ -28,6 +28,7 @@ Page({
   data: {
     page: 0,
     keytype: 0,
+    dom: [],
     msgList: []
   },
 
@@ -37,6 +38,17 @@ Page({
   onLoad: function (options) {
     _getTypeList(this, { keytype: 6})
     _getMsg(this, { keytype: 1, page: 0 })
+    func.wxUtil.getSelectorQuery(this, 'navItem').then(res => {
+      this.setData({
+        dom: res
+      })
+      console.log(this.data.dom)
+    })
+  },
+  nav(e) {
+    this.setData({
+      navIndex: e.currentTarget.dataset.index
+    })
   },
   add() {
     wx.navigateTo({
