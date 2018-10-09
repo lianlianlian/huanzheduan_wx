@@ -1,7 +1,9 @@
 <!--pages/components/access/index.wxml-->
 <view class='list'>
   <block wx:for="{{commentList}}" wx:key="index">
-    <comment-item item="{{item}}" wx:if="{{index < 2}}"></comment-item>
+    <navigator url='../../../../assess/index?keytype={{keytype}}&id={{keyId}}&clientName={{item.nickname}}&commentId={{item.id}}' hover-class='none'>
+      <comment-item item="{{item}}" keyId="{{keyId}}" keytype="{{keytype}}" wx:if="{{index < 2}}"></comment-item>
+    </navigator>
   </block>
 </view>
 <view class='list overflow-hidden' wx:if="{{commentList.length <= 0}}">
@@ -9,6 +11,9 @@
     <view class="weui-loadmore__tips weui-loadmore__tips_in-line">暂无评价</view>
   </view>
 </view>
-<view class='more-num'><text bindtap='more' wx:if="{{commentList.length > 2}}">剩余{{commentList.length - 2}}条</text></view>
-<comment-input></comment-input>
+<view class='more-num' wx:if="{{commentList.length > 2}}"><text bindtap='more'>剩余{{commentList.length - 2}}条</text></view>
+<navigator url='../../../../assess/index?keytype={{keytype}}&id={{keyId}}' hover-class='none'>
+  <comment-input></comment-input>
+</navigator>
+
 

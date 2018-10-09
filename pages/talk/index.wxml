@@ -9,7 +9,7 @@
   <view class='shop-box' style="height:{{systemInfo.windowHeight - searchHeight}}px">
     <navigation direction='true' itemIndex='{{itemIndex}}' dom="{{dom}}" id='navigation'>
       <block wx:for="{{shopNav}}" wx:key="index">
-          <view class="itemw {{index == itemIndex?'active':''}}" data-index='{{index}}' bindtap='getIndex' slot='item'>{{item.name}}</view>
+          <view class="itemw {{index == itemIndex?'active':''}}" data-index='{{index}}' bindtap='getIndex' slot='item'>{{item.namepath}}</view>
       </block>
     </navigation>
     <scroll-view class='shop-list' scroll-y scroll-with-animation scroll-into-view='{{id}}' bindscroll='scroll'>

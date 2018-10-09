@@ -2,6 +2,7 @@ import { BASEURL, DATAKEY} from './httpConfig.js';
 import wxUtil from '../utils/wxUtil'
 const md5 = require('../utils/md5.js')
 import util from '../utils/util.js'
+import CookieStore from '../utils/vendor/weapp-cookie/src/CookieStore.js'
 
 const errCode = ({ error_code: code, msg, url, data, content, openLoading}) => {
   return new Promise((resolve, reject) => {
@@ -74,17 +75,39 @@ export const http = ({ url, data = {}, method = 'POST',content, openLoading = tr
 
 export const file = ({ url, path, data = {}, content, openLoading = true, loadingTxt = '加载中...'}) => 
   new Promise((resovle, reject) => {
+    const cookieStore = new CookieStore()
+    // 域名
+    let domain = (BASEURL || '').split('/')[2]
+    let _path = (BASEURL + url).split(domain).pop()
+
+    // 获取请求 cookies
+    let requestCookies = cookieStore.getRequestCookies(domain, _path)
+
+
     let token = wx.getStorageSync('token') || ''
     let datetime = util.formatTime()
     let sign = md5.hexMD5(DATAKEY + '|' + datetime + '|' + url)
     let device_type = 3
     let client_type = 1
     Object.assign(data, { datetime, device_type, client_type, sign, token })
+    console.log(path)
+    console.log(data)
     wx.uploadFile({
       url: BASEURL + url,
       filePath: path,
       name: 'file',
-      formData: data,
+      formData: {
+        token: "TK_5206_4",
+        duration:0,
+        keyid:0,
+        keytype:1,
+        orderby:0,
+        temp_file:"file"
+      },
+      header: {
+        "Cookie": requestCookies,
+        "X-Requested-With": 'XMLHttpRequest'
+      },
       success: res => {
         console.log(res)
         if (res.data.success) {

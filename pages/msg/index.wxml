@@ -2,17 +2,25 @@
 <view class='container'>
   <view class='nav-box flex'>
     <navigation direction="{{false}}" itemIndex="{{navIndex}}">
-      <block wx:for="{{9}}" wx:key="index">
-        <view class='navItem' slot="item" bindtap='nav' data-index='{{index}}' dom="{{dom}}">qq{{index}}</view>
+      <block wx:for="{{navList}}" wx:key="index">
+        <view class='navItem {{navIndex === index ? "active" : ""}}' slot="item" bindtap='nav' data-index='{{index}}' dom="{{dom}}">{{item.name}}</view>
       </block>
     </navigation>
     <view class='add' bindtap='add'>+</view>
   </view>
-  <view class='list'>
-    <block wx:for="{{msgList}}" wx:key="index">
-      <navigator url='../msg-detail/index?id={{item.id}}'>
-        <msg-item item="{{item}}"></msg-item>
-      </navigator>
-    </block>
+  <view class='wrap'>
+    <view class='list'>
+      <block wx:for="{{msgList}}" wx:key="index">
+        <navigator url='../msg-detail/index?id={{item.id}}'>
+          <msg-item item="{{item}}"></msg-item>
+        </navigator>
+      </block>
+    </view>
+    <view class='overflow-hidden' wx:if="{{msgList.length === 0}}">
+      <view class="weui-loadmore weui-loadmore_line">
+          <view class="weui-loadmore__tips weui-loadmore__tips_in-line">暂无数据</view>
+      </view>
+    </view>
   </view>
+  
 </view>

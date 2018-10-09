@@ -3,7 +3,7 @@
   <view class='top'></view>
   <view class='box'>
     <view class='user-box'>
-      <image src='../../static/img/user.png'></image>
+      <file-up></file-up>
       <text>编号：{{userInfo.username}}</text>
     </view>
     <form bindsubmit="submit">

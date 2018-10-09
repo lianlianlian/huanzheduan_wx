@@ -15,6 +15,7 @@ function _updataMsg(content, data) {
 
   updataMsg({data}).then(res => {
     msgDetail.loveflag = msgDetail.loveflag == 0 ? 1 : 0
+    func.wxUtil.showToast({ title: '操作成功！' })
     content.setData({
       msgDetail
     })

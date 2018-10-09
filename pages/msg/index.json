@@ -1,6 +1,5 @@
 {
   "navigationBarTitleText": "知识文章",
-  "enablePullDownRefresh": true,
   "usingComponents": {
     "msg-item": "../components/msg-item/index",
     "navigation": "../components/navigation/index"

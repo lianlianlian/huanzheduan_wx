@@ -15,11 +15,7 @@ function _getMsg(content, data) {
     })
   })
 }
-function _getTypeList(content, data) {
-  getTypeList({data}).then(res => {
-    console.log(res)
-  })
-}
+
 Page({
 
   /**
@@ -27,8 +23,9 @@ Page({
    */
   data: {
     page: 0,
-    keytype: 0,
+    navIndex: 0,
     dom: [],
+    navList: [],
     msgList: []
   },
 
@@ -36,8 +33,15 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    _getTypeList(this, { keytype: 6})
-    _getMsg(this, { keytype: 1, page: 0 })
+
+    getTypeList({data: { keytype: 6 }}).then(res => {
+      let navList = res.infor.listItems
+      this.setData({
+        navList
+      })
+      _getMsg(this, { keytype: navList[0].id, clienttype: 1, page: 0 })
+    })
+
     func.wxUtil.getSelectorQuery(this, 'navItem').then(res => {
       this.setData({
         dom: res
@@ -46,9 +50,12 @@ Page({
     })
   },
   nav(e) {
+    const {navList} = this.data
+    let index = e.currentTarget.dataset.index
     this.setData({
-      navIndex: e.currentTarget.dataset.index
+      navIndex: index
     })
+    _getMsg(this, { keytype: navList[index].id, clienttype: 1, page: 0 })
   },
   add() {
     wx.navigateTo({
@@ -59,20 +66,20 @@ Page({
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function () {
-    const { keytype} = this.data
+  // onPullDownRefresh: function () {
+  //   const { navIndex, navList } = this.data
 
-    _getMsg(this, { keytype, page: 0})
-  },
+  //   _getMsg(this, { keytype: navList[navIndex].id, clienttype: 1, page: 0})
+  // },
 
   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-    const { page, msgList, keytype } = this.data
+    const { page, msgList, navIndex, navList} = this.data
 
     if (msgList.length >= page * globalData.pageSize) {
-      _getMsg(this, { keytype, page})
+      _getMsg(this, { keytype: navList[navIndex].id, clienttype: 1, page})
     }
   }
 

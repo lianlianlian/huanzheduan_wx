@@ -4,14 +4,14 @@
     <post item="{{tribuneItem}}" index="0" bind:concern="concern"></post>
   </view>
   <view class='group bottom'>
-    <block wx:for="{{4}}" wx:key="index">
+    <block wx:for="{{blogList}}" wx:key="index">
       <navigator url='../talk-detail/index?id={{item.id}}'>
         <post-item item="{{item}}"></post-item>
       </navigator>
     </block>
   </view>
 </view>
-<navigator url='../post-publish/index' hover-class='none'>
+<navigator url='../post-publish/index?id={{id}}' hover-class='none'>
   <view class='pub-box'>
     <image src='../../static/img/pub-icon.png'></image>
   </view>

@@ -1,14 +1,14 @@
 <!--pages/components/post-item/index.wxml-->
 <view class='item'>
-  <view class='name'>抑郁症应该如何调节？</view>
+  <view class='name'>{{item.title}}</view>
   <view class='infor flex-between'>
     <view class='browse-box flex'>
       <view class='browse'>
         <image class='ear-img' src='../../../static/img/ear-icon.png'></image>
-        <text>45681</text>
+        <text>{{item.viewcount}}</text>
       </view>
-      <text class='time'>2018.08.16 12:30</text>
+      <text class='time'>{{item.regdate}}</text>
     </view>
-    <view class='grade'>时光专家</view>
+    <view class='grade'>{{item.nickname}}</view>
   </view>
 </view>

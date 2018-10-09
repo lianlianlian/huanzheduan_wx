@@ -38,6 +38,7 @@
     "pages/my-doctor/index",
     "pages/provision/index",
     "pages/feed-back/index",
+    "pages/assess/index",
     "pages/records/index",
     "pages/treatment-feedback/index",
     "pages/set/index",

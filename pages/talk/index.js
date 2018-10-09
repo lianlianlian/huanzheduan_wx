@@ -1,10 +1,18 @@
 // pages/talk/index.js
 const { func, globalData} = getApp()
-import { getBlogList} from '../../api/api.js'
+import { getTribuneList} from '../../api/api.js'
 
-function _getBlogList(content, data) {
-  getBlogList({data}).then(res => {
-    console.log(res)
+function _getTribuneList(content, data) {
+  getTribuneList({ data }).then(res => {
+    let result = res.infor.listItems
+    let tribuneList = content.data.tribuneList
+
+    // result = data.page === 0 ? result : [...tribuneList, ...result]
+
+    content.setData({
+      tribuneList: result,
+      // page: ++ data.page
+    })
   })
 }
 
@@ -14,39 +22,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    shopNav: [
-      {
-        name: '主板'
-      },
-      {
-        name: '主板'
-      },
-      {
-        name: '主板'
-      },
-      {
-        name: '主板'
-      },
-      {
-        name: '我关注的'
-      }
-    ],
-    tribuneList: [
-      {
-        id: 1,
-        imgurl: '../../../static/img/user.png',
-        name: '抑郁症病因',
-        blog_count: '2888',
-        loveflag: 0
-      },
-      {
-        id: 2,
-        imgurl: '../../../static/img/user.png',
-        name: '抑郁症病因',
-        blog_count: '2888',
-        loveflag: 0
-      }
-    ],
+    shopNav: [],
+    tribuneList: [],
     systemInfo: {},
     searchHeight: 0,
     itemIndex: 0
@@ -56,10 +33,18 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+
     this.setData({
       systemInfo: globalData.systemInfo
     })
-    _getBlogList(this, { keytype: 1})
+    getTribuneList({data: { keytype: 1, parentid: 0 }}).then(res => {
+      let result = res.infor.listItems
+      result = [...result, { namepath: '我的关注', keytype: 2}]
+      this.setData({
+        shopNav: result
+      })
+      _getTribuneList(this, { keytype: 1, parentid: result[0].id })
+    })
   },
 
   /**
@@ -81,10 +66,12 @@ Page({
   },
   getIndex(e) {
     const { index } = e.currentTarget.dataset
-    
+    const { shopNav} = this.data
+
     this.setData({
       itemIndex: index
     })
+    _getTribuneList(this, { keytype: shopNav[index].keytype === 2 ? 2 : 1, parentid: shopNav[index].keytype === 2 ? '' : shopNav[index].id })
   },
   navigation(e) {
     const { id } = e.detail

@@ -1,36 +1,56 @@
 <!--pages/my-collection/index.wxml-->
 <view class='container'>
   <my-tabs nav="{{nav}}" bind:tabNav="tabNav" bind:edit="edit" isEdit="{{true}}"></my-tabs>
-  <view class='list' wx:if="{{navIndex === 0}}" style='{{eidtStatus?"padding-bottom: 130rpx" : ""}}'>
-    <block wx:for="{{msgList}}" wx:key="index">
-      <view class='item flex'>
-        <view class='icon-box' wx:if="{{eidtStatus}}">
-          <icon type='success' color='{{item.edit ? "#e34a4a":"#d2d2d2"}}' class='icon' data-index='{{index}}' bindtap='itemEdit'></icon>
+  <view class='wrap' wx:if="{{navIndex === 0}}">
+    <view class='list'>
+      <block wx:for="{{msgList}}" wx:key="index">
+        <view class='item flex'>
+          <view class='icon-box' wx:if="{{eidtStatus}}">
+            <icon type='success' color='{{item.edit ? "#e34a4a":"#d2d2d2"}}' class='icon' data-index='{{index}}' bindtap='itemEdit'></icon>
+          </view>
+          <msg-item item="{{item}}"></msg-item>
         </view>
-        <msg-item item="{{item}}"></msg-item>
+      </block>
+    </view>
+    <view class='overflow-hidden' wx:if="{{msgList.length === 0}}">
+      <view class="weui-loadmore weui-loadmore_line">
+          <view class="weui-loadmore__tips weui-loadmore__tips_in-line">暂无数据</view>
       </view>
-    </block>
+    </view>
   </view>
-  <view class='list video' wx:if="{{navIndex === 1}}">
-    <block wx:for="{{videoList}}" wx:key="index">
-      <view class='item flex'>
-        <view class='icon-box' wx:if="{{eidtStatus}}">
-          <icon type='success' color='{{item.edit ? "#e34a4a":"#d2d2d2"}}' data-index='{{index}}' bindtap='itemEdit'></icon>
+  <view class='wrap' wx:elif="{{navIndex === 1}}">
+    <view class='list video'>
+      <block wx:for="{{videoList}}" wx:key="index">
+        <view class='item flex'>
+          <view class='icon-box' wx:if="{{eidtStatus}}">
+            <icon type='success' color='{{item.edit ? "#e34a4a":"#d2d2d2"}}' data-index='{{index}}' bindtap='itemEdit'></icon>
+          </view>
+          <video-item item="{{item}}"></video-item>
         </view>
-        <video-item item="{{item}}"></video-item>
+      </block>
+    </view>
+    <view class='overflow-hidden' wx:if="{{videoList.length === 0}}">
+      <view class="weui-loadmore weui-loadmore_line">
+          <view class="weui-loadmore__tips weui-loadmore__tips_in-line">暂无数据</view>
       </view>
-    </block>
+    </view>
   </view>
-  <view class='list' wx:if="{{navIndex === 2}}">
-    <block wx:for="{{3}}" wx:key="index">
-      <view class='item flex'>
-        <view class='icon-box' wx:if="{{eidtStatus}}">
-          <icon type='success' color='{{item.edit ? "#e34a4a":"#d2d2d2"}}' class='icon' data-index='{{index}}' bindtap='itemEdit'></icon>
+  <view class='wrap' wx:else>
+    <view class='list'>
+      <block wx:for="{{blogList}}" wx:key="index">
+        <view class='item flex'>
+          <view class='icon-box' wx:if="{{eidtStatus}}">
+            <icon type='success' color='{{item.edit ? "#e34a4a":"#d2d2d2"}}' class='icon' data-index='{{index}}' bindtap='itemEdit'></icon>
+          </view>
+          <post-item item="{{item}}"></post-item>
         </view>
-        
-        <post-item item="{{item}}"></post-item>
+      </block>
+    </view>
+    <view class='overflow-hidden' wx:if="{{blogList.length === 0}}">
+      <view class="weui-loadmore weui-loadmore_line">
+          <view class="weui-loadmore__tips weui-loadmore__tips_in-line">暂无数据</view>
       </view>
-    </block>
+    </view>
   </view>
   <view class='handle-box flex' wx:if="{{eidtStatus}}">
     <button class='flex' bindtap='allChoose'>

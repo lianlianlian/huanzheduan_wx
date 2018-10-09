@@ -2,7 +2,9 @@
 <view class='container'>
   <view class='list group'>
     <block wx:for="{{commentList}}" wx:key="index">
-      <comment-item item="{{item}}"></comment-item>
+      <navigator url='../assess/index?keytype={{keytype}}&id={{keyId}}&clientName={{item.nickname}}&commentId={{item.id}}'>
+        <comment-item item="{{item}}"></comment-item>
+      </navigator>
     </block>
   </view>
 </view>

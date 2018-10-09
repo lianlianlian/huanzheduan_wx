@@ -1,0 +1,9 @@
+<!--pages/assess/index.wxml-->
+<view class='container'>
+  <view class='textarea-box'>
+    <textarea placeholder='{{placeholder}}' maxlength="{{140}}" bindinput='inputContent'></textarea>
+  </view>
+  <view class='submit-box'>
+    <button class='submit-btn' bindtap='submit'>发送</button>
+  </view>
+</view>

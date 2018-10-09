@@ -1,23 +1,28 @@
 <!--pages/my-publish/index.wxml-->
 <view class='constainer'>
   <view class='list'>
-    <block wx:for="{{5}}" wx:key="index">
+    <block wx:for="{{blogList}}" wx:key="index">
       <navigator url='../talk-detail/index?id={{item.id}}'>
         <view class='item border-bottom'>
-          <view class='name l-o'>抑郁症应该如何调节？</view>
-          <view class='content'>问题描述问题描述</view>
+          <view class='name l-o'>{{item.title}}</view>
+          <view class='content'>{{item.content}}</view>
           <view class='mi-msg flex-between'>
             <view class='reason'>抑郁症病因</view>
             <view class='browse-box flex'>
               <view class='browse'>
                 <image class='ear-img' src='../../static/img/ear-icon.png'></image>
-                <text>45681</text>
+                <text>{{item.viewcount}}</text>
               </view>
-              <text class='time'>2018.08.16 12:30</text>
+              <text class='time'>{{item.regdate}}</text>
             </view>
           </view>
         </view>
       </navigator>
     </block>
+  </view>
+  <view class='overflow-hidden' wx:if="{{blogList.length === 0}}">
+    <view class="weui-loadmore weui-loadmore_line">
+        <view class="weui-loadmore__tips weui-loadmore__tips_in-line">暂无数据</view>
+    </view>
   </view>
 </view>

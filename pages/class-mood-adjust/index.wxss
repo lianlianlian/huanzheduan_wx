@@ -1,6 +1,8 @@
 /* pages/class-mood-adjust/index.wxss */
-.list {
+.wrap{
   padding-bottom: 30rpx;
+}
+.list {
   background: #fff;
 }
 .item{

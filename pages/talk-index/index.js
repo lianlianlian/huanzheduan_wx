@@ -11,8 +11,13 @@ function _getTribuneDetail(content, data) {
 }
 function _getBlogList(content, data) {
   getBlogList({data}).then(res => {
+    let { blogList, page} = content.data
+    let result = res.infor.listItems
+    result = data.page === 0 ? result : [...blogList, ...result]
+
     content.setData({
-      blogList: res.infor.listItems
+      blogList: result,
+      page: ++ data.page
     })
   })
 }
@@ -22,18 +27,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-    tribuneItem: {
-      id: 1,
-      imgurl: '../../../static/img/user.png',
-      name: '抑郁症病因',
-      blog_count: '2888',
-      loveflag: 0
-    },
-    blogList: [
-      {
-        
-      }
-    ]
+    tribuneItem: {},
+    blogList: [],
+    page: 0
   },
 
   /**
@@ -46,7 +42,7 @@ Page({
       id
     })
     _getTribuneDetail(this, { blog_type_id: id})
-    _getBlogList(this, { keytype: 0, type_id: id})
+    _getBlogList(this, { keytype: 0, type_id: id, page: 0})
   },
 
   /**
@@ -83,13 +79,6 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-  
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
   
   }
 })

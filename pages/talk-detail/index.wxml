@@ -3,12 +3,12 @@
   <view class='group top'>
     <view class='title'>{{item.title}}</view>
     <view class='infor flex'>
-      <view class='reason'>抑郁症病因</view>
+      <view class='reason'>{{item.name}}</view>
       <view class='browse-box flex'>
         <image class='ear-img' src='../../static/img/ear-icon.png'></image>
         <text>{{item.viewcount}}</text>
         <image class='common-img' src='../../static/img/icon-common-num.png'></image>
-        <text>456</text>
+        <text>{{item.replycount}}</text>
       </view>
     </view>
   </view>

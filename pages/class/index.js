@@ -30,7 +30,7 @@ Page({
    */
   onLoad: function (options) {
     _getTypeList(this, { keytype: 5})
-    _getMsg(this, { keytype: 1, page: 0 })
+    _getMsg(this, { keytype: 0, clienttype: 1, page: 0 })
   },
 
   nav(e) {

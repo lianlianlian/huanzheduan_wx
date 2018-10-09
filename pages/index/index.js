@@ -20,8 +20,8 @@ function _getAd(content, data) {
   })
 }
 function _getMyDoctor(content) {
-  getMyDoctor().then(res => {
-
+  getMyDoctor({ data: { parentid: 1}}).then(res => {
+    console.log(res)
   })
 }
 function _userDetail(content, data) {
@@ -61,30 +61,10 @@ Page({
   onLoad: function (options) {
     // new app.func.WeToast();
     const id = wx.getStorageSync('userId')
-    wx.request({
-      url: 'http://jcool-cloud.com:9999/auth/oauth/token',
-      data: {
-        username:'admin',
-        password:'123456',
-        grant_type:'password',
-        client_id:'jcloud',
-        client_secret:'jcloud'
-      },
-      header: {
-        "content-type": "application/x-www-form-urlencoded",
-      },
-      method: 'post',
-      dataType: 'json',
-      responseType: 'text',
-      success: function(res) {
-        console.log(res)
-      },
-      fail: function(res) {},
-      complete: function(res) {},
-    })
+    
     _getAd(this)
-    _getMsg(this, { keytype: 1, page: 0})
-    // _getMyDoctor(this)
+    _getMsg(this, { keytype: 0, clienttype: 1, page: 0})
+    _getMyDoctor(this)
 
     if (id) {
       _userDetail(this, { id })

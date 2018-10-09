@@ -19,6 +19,9 @@ button::after{
 image{
   vertical-align: middle;
 }
+.overflow-hidden{
+  overflow: hidden;
+}
 .toast{
   position: fixed;
   top: 50%;

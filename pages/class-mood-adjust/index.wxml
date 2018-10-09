@@ -1,19 +1,26 @@
 <!--pages/class-mood-adjust/index.wxml-->
 <view class='container'>
-  <view class='list'>
-    <block wx:for="{{videoList}}" wx:key="index">
-      <navigator url='../class-mood-adjust-detail/index?id={{item.id}}'>
-        <view class='item'>
-          <view class='name d-o'>{{item.title}}</view>
-          <view class='video-box'>
-            <image src='{{item.imgurl}}'></image>
-            <view class='time-box flex'>
-              <image src='../../static/img/video-icon.png'></image>
-              <text>{{item.time}}</text>
+  <view class='wrap'>
+    <view class='list'>
+      <block wx:for="{{videoList}}" wx:key="index">
+        <navigator url='../class-mood-adjust-detail/index?id={{item.id}}'>
+          <view class='item'>
+            <view class='name d-o'>{{item.title}}</view>
+            <view class='video-box'>
+              <image src='{{item.imgurl}}'></image>
+              <view class='time-box flex'>
+                <image src='../../static/img/video-icon.png'></image>
+                <text>{{item.time}}</text>
+              </view>
             </view>
           </view>
-        </view>
-      </navigator>
-    </block>
+        </navigator>
+      </block>
+    </view>
+    <view class='overflow-hidden' wx:if="{{videoList.length === 0}}">
+      <view class="weui-loadmore weui-loadmore_line">
+          <view class="weui-loadmore__tips weui-loadmore__tips_in-line">暂无数据</view>
+      </view>
+    </view>
   </view>
 </view>

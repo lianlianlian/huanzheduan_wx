@@ -15,7 +15,7 @@ export const resetPassword = (data) => http({ url: 'password_reset', ...data });
 export const getUnreadNumber = (data) => http({ url: 'unread_get', ...data }); // 未读消息数
 export const getNewsList = (data) => http({ url: 'notice_list', ...data }); // 通知列表
 export const updataNews = (data) => http({ url: 'notice_saveoperate', ...data }); // 通知操作
-export const getMyDoctor = (data) => http({ url: 'my_doctor_get', ...data }); // 我的医生
+export const getMyDoctor = (data) => http({ url: 'hospital_list', ...data }); // 我的医生
 export const getAdList = (data) => http({ url: 'ad_list', ...data })         // 广告
 export const getMsgList = (data) => http({ url: 'article_list', ...data })   // 文章列表
 export const getMsgDetail = (data) => http({ url: 'article_get', ...data })  // 文章详情
@@ -25,9 +25,10 @@ export const getVideoDetail = (data) => http({ url: 'video_get', ...data })  // 
 export const updataVideo = (data) => http({ url: 'video_favor', ...data })  // 视频收藏
 export const getTribuneList = (data) => http({ url: 'blog_type_list', ...data })   // 论坛列表
 export const getTribuneDetail = (data) => http({ url: 'blog_type_get', ...data })   // 论坛详情
+export const updataTribuneList = (data) => http({ url: 'blog_type_favor', ...data })   // 关注论坛
 export const getBlogList = (data) => http({ url: 'blog_list', ...data })   // 帖子列表
 export const getBlogDetail = (data) => http({ url: 'blog_get', ...data })   // 帖子详情
-export const updataBlogList = (data) => http({ url: 'blog_type_favor', ...data })   // 关注帖子
+export const updataBlogList = (data) => http({ url: 'blog_favor', ...data })   // 收藏帖子
 export const addBlog = (data) => http({ url: 'blog_add', ...data })   // 发表帖子
 export const getTypeList = (data) => http({ url: 'type_list', ...data })   // 分类列表
 export const getCommentList = (data) => http({ url: 'comment_list', ...data })  // 评价列表
