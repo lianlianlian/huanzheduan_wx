@@ -14,6 +14,7 @@ function _updataVideo(content, data) {
   let { videoDetail } = content.data
   updataVideo({data}).then(res => {
     videoDetail.loveflag = videoDetail.loveflag == 0 ? 1 : 0
+    func.wxUtil.showToast({ title: data.keytype === 1 ? '收藏成功！' : '取消收藏成功！' })
     content.setData({
       videoDetail
     })
@@ -44,7 +45,7 @@ Page({
   },
   collect() {
     let { videoDetail, id } = this.data
-    let keytype = videoDetail.loveflag == 0 ? 1 : 0
+    let keytype = videoDetail.loveflag == 0 ? 1 : 2
     let token = wx.getStorageSync('token')
 
     if (!token) {
@@ -55,7 +56,7 @@ Page({
       })
       return false
     }
-    _updataVideo(this, { keytype, video_id: id })
+    _updataVideo(this, { keytype, clienttype: 1, video_id: id })
   },
 
   /**

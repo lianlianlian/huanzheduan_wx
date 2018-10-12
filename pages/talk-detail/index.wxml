@@ -1,6 +1,6 @@
 <!--pages/talk-detail/index.wxml-->
 <view class='container'>
-  <view class='group top'>
+  <view class='group top box'>
     <view class='title'>{{item.title}}</view>
     <view class='infor flex'>
       <view class='reason'>{{item.name}}</view>
@@ -12,14 +12,16 @@
       </view>
     </view>
   </view>
-  <view class='group bottom'>
+  <view class='group bottom box'>
     <view class='people-info border-bottom'>
-      <view class='name flex'><text>时光专家</text><view class='flag'>楼主</view></view>
-      <view class='time'>2018.08.16 12:30</view>
+      <view class='name flex'><text>{{item.nickname}}</text><view class='flag'>楼主</view></view>
+      <view class='time'>{{item.regdate}}</view>
     </view>
     <image src='../../static/img/img.png' class='img'></image> 
-    <view class='msg-p'>抑郁症是精神疾病的一种，如果不及时治疗，不仅会给患者本人的精神生活带来很多痛苦，也会严重影响到患者家属的正常生活。那么抑郁症该</view>
-    <view class='msg-p'>轻度的抑郁症如何通过自我调理来恢复健康？抑郁症自我调理的方法有哪些？</view>
-    <comment-box></comment-box>
+    <view class='msg-p'>{{item.content}}</view>
+    <!-- <view class='msg-p'>轻度的抑郁症如何通过自我调理来恢复健康？抑郁症自我调理的方法有哪些？</view> -->
+  </view>
+  <view class='group box'>
+    <comment-box keyId="{{id}}" keytype="3"></comment-box>
   </view>
 </view>

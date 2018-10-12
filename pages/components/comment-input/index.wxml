@@ -1,5 +1,5 @@
 <!--pages/components/comment-input/index.wxml-->
 <view class='my-comment'>
   <image src='../../../static/img/access-icon.png'></image>
-  <input type='text' placeholder='写评论...'></input>
+  <input type='text' placeholder='写评论...' disabled></input>
 </view>

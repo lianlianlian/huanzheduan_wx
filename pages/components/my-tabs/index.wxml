@@ -3,5 +3,5 @@
   <block wx:for="{{nav}}" wx:key="index">
     <view class='item {{navIndex === index ? "active":""}}' data-index='{{index}}' bindtap='nav'>{{item}}</view>
   </block>
-  <image src='{{status ? "../../../static/img/edit-active-icon.png":"../../../static/img/edit-icon.png"}}' class='edit-img' bindtap='edit' wx:if="{{isEdit}}"></image>
+  <image src='{{status ? "../../../static/img/edit-active-icon.png":"../../../static/img/edit-icon.png"}}' class='edit-img' bindtap='_edit' wx:if="{{isEdit}}"></image>
 </view>

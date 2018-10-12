@@ -24,6 +24,7 @@
   width: 180rpx;
 }
 .shop-box .shop-list{
+  height: 100%;
   flex: 1;
   padding: 0 20rpx 0 30rpx;
   background: #fff;

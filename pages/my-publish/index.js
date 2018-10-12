@@ -22,15 +22,14 @@ Page({
    * 页面的初始数据
    */
   data: {
-    page: 0,
-    blogList: []
+    page: 0
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    _getBlogList(this, { keytype: 2, page: 0})
+    _getBlogList(this, { keytype: 2, clienttype: 1, page: 0})
   },
 
 
@@ -45,7 +44,7 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-    _getBlogList(this, { keytype: 2, page: 0 })
+    _getBlogList(this, { keytype: 2, clienttype: 1, page: 0 })
   },
 
   /**
@@ -55,7 +54,7 @@ Page({
     const { page, blogList } = this.data
 
     if (blogList.length >= page * globalData.pageSize) {
-      _getBlogList(this, { keytype: 2, page })
+      _getBlogList(this, { keytype: 2, clienttype: 1, page })
     }
   }
 })

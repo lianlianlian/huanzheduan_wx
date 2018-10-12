@@ -30,3 +30,7 @@
  color: #adadad;
  font-size: 12px;
 }
+.flex{
+  display: flex;
+  align-items: center;
+}

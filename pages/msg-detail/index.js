@@ -15,7 +15,7 @@ function _updataMsg(content, data) {
 
   updataMsg({data}).then(res => {
     msgDetail.loveflag = msgDetail.loveflag == 0 ? 1 : 0
-    func.wxUtil.showToast({ title: '操作成功！' })
+    func.wxUtil.showToast({ title: data.keytype === 1 ? '收藏成功！' : '取消收藏成功！'})
     content.setData({
       msgDetail
     })
@@ -51,7 +51,7 @@ Page({
   },
   collect() {
     let { msgDetail, id} = this.data
-    let keytype = msgDetail.loveflag == 0 ? 1 : 0
+    let keytype = msgDetail.loveflag == 0 ? 1 : 2
     let token = wx.getStorageSync('token')
 
     if(!token) {

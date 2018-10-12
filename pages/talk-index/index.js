@@ -42,7 +42,7 @@ Page({
       id
     })
     _getTribuneDetail(this, { blog_type_id: id})
-    _getBlogList(this, { keytype: 0, type_id: id, page: 0})
+    _getBlogList(this, { keytype: 0, clienttype: 1, type_id: id, page: 0})
   },
 
   /**

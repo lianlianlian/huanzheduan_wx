@@ -21,6 +21,10 @@ function _getMsg(content, data) {
 // 是否收藏文章
 function _updataMsg(content, data) {
   updataMsg({data}).then(res => {
+    content.selectComponent('#tabs').edit()
+    content.setData({
+      eidtStatus: false
+    })
     _getMsg(content, { keytype: -1, clienttype: 1, page: 0 })
   })
 }
@@ -44,7 +48,11 @@ function _getVideoList(content, data) {
 // 是否收藏视频
 function _updataVideo(content, data) {
   updataVideo({data}).then(res => {
-    _getVideoList(content, { type_id: -1, page: 0 })
+    content.selectComponent('#tabs').edit()
+    content.setData({
+      eidtStatus: false
+    })
+    _getVideoList(content, { type_id: -1, clienttype: 1, page: 0 })
   })
 }
 // 收藏帖子列表
@@ -67,7 +75,11 @@ function _getBlogList(content, data) {
 // 是否收藏帖子
 function _updataBlogList(content, data) {
   updataBlogList({data}).then(res => {
-    _getBlogList(this, { keytype: 1 })
+    content.selectComponent('#tabs').edit()
+    content.setData({
+      eidtStatus: false
+    })
+    _getBlogList(content, { keytype: 1, clienttype: 1, page: 0})
   })
 }
 Page({
@@ -104,7 +116,7 @@ Page({
    */
   onPullDownRefresh: function () {
     const {navIndex: index} = this.data
-    index == 0 ? _getMsg(this, { keytype: -1, clienttype: 1, page: 0 }) : index == 1 ? _getVideoList(this, { type_id: -1, page: 0 }) : _getBlogList(this, { keytype: 1, page: 0})
+    index == 0 ? _getMsg(this, { keytype: -1, clienttype: 1, page: 0 }) : index == 1 ? _getVideoList(this, { type_id: -1, clienttype: 1, page: 0 }) : _getBlogList(this, { keytype: 1, clienttype:1, page: 0})
   },
 
 
@@ -119,11 +131,11 @@ Page({
       }
     } else if (navIndex === 1) {
       if (videoList.length >= page[navIndex] * globalData.pageSize) {
-        _getVideoList(this, { type_id: -1, page: page[navIndex] })
+        _getVideoList(this, { type_id: -1, clienttype: 1, page: page[navIndex] })
       }
     } else if (navIndex === 2) {
       if (blogList.length >= page[navIndex] * globalData.pageSize) {
-        _getBlogList(this, { keytype: 1, page: page[navIndex] })
+        _getBlogList(this, { keytype: 1, clienttype: 1, page: page[navIndex] })
       }
     }
   },
@@ -136,16 +148,17 @@ Page({
     const { isFirst} = this.data
 
     this.setData({
-      navIndex: index
+      navIndex: index,
+      eidtStatus: false
     })
     if (isFirst[index]) {
-      index == 0 ? _getMsg(this, { keytype: -1, clienttype: 1, page: 0 }) : index == 1 ? _getVideoList(this, { type_id: -1, page: 0 }) : _getBlogList(this, { keytype: 1, page: 0})
+      index === 0 ? _getMsg(this, { keytype: -1, clienttype: 1, page: 0 }) : index === 1 ? _getVideoList(this, { type_id: -1, clienttype: 1, page: 0 }) : _getBlogList(this, { keytype: 1, clienttype: 1, page: 0})
     }
     
   },
   edit(e) {
     const flag = e.detail
-    const { navIndex} = this.data
+    const { navIndex, msgList, videoList, blogList} = this.data
 
     this.setData({
       eidtStatus: flag,
@@ -156,7 +169,7 @@ Page({
   // 选择某项
   itemEdit(e) {
     const { index } = e.currentTarget.dataset
-    let { navIndex, msgList, videoList, cardList, allStatus} = this.data
+    let { navIndex, msgList, videoList, blogList, allStatus} = this.data
 
     if (navIndex == 0) {
       msgList[index].edit = !msgList[index].edit;
@@ -175,18 +188,18 @@ Page({
         allStatus
       })
     } else if (navIndex == 2) {
-      cardList[index].edit = !cardList[index].edit;
-      allStatus = cardList.every((item, index) => item.edit)
+      blogList[index].edit = !blogList[index].edit;
+      allStatus = blogList.every((item, index) => item.edit)
 
       this.setData({
-        cardList,
+        blogList,
         allStatus
       })
     }
   },
   // 点击全选
   allChoose() {
-    let { navIndex, msgList, videoList, cardList, allStatus} = this.data
+    let { navIndex, msgList, videoList, blogList, allStatus} = this.data
     allStatus = !allStatus
 
     if (navIndex == 0) {
@@ -202,16 +215,16 @@ Page({
         allStatus
       })
     } else if (navIndex == 2) {
-      cardList.forEach((item, index) => item.edit = allStatus)
+      blogList.forEach((item, index) => item.edit = allStatus)
       this.setData({
-        cardList,
+        blogList,
         allStatus
       })
     }
   },
   // 点击删除
   delet() {
-    const { navIndex, msgList, videoList, cardList } = this.data
+    const { navIndex, msgList, videoList, blogList } = this.data
     let idList = ''
 
     func.wxUtil.showModal({ title: '删除提示', content: navIndex == 0 ? '确定要删除所选文章吗？' : navIndex == 1 ? '确定要删除所选视频吗？' : '确定要删除所选帖子吗？'}).then(res => {
@@ -219,12 +232,24 @@ Page({
       if (res.confirm) {
         if (navIndex == 0) {
           idList = msgList.reduce((arr, item) => {item.edit? arr.push(item.id) : null; return arr}, []).join(',')
+          if (idList.length <= 0) {
+            func.wxUtil.showToast({ title: '请至少选择一项！' })
+            return false
+          }
           _updataMsg(this, { keytype: 3, clienttype: 1, article_id: idList})
         } else if (navIndex == 1) {
           idList = videoList.reduce((arr, item) => { item.edit ? arr.push(item.id) : null; return arr }, []).join(',')
-          _updataVideo(this, { keytype: 3, video_id: idList })
+          if (idList.length <= 0) {
+            func.wxUtil.showToast({ title: '请至少选择一项！' })
+            return false
+          }
+          _updataVideo(this, { keytype: 3, clienttype: 1, video_id: idList })
         } else if (navIndex == 2) {
-          idList = cardList.reduce((arr, item) => { item.edit ? arr.push(item.id) : null; return arr }, []).join(',')
+          idList = blogList.reduce((arr, item) => { item.edit ? arr.push(item.id) : null; return arr }, []).join(',')
+          if (idList.length <= 0) {
+            func.wxUtil.showToast({ title: '请至少选择一项！' })
+            return false
+          }
           _updataBlogList(this, { keytype: 3, clienttype: 1, blog_id: idList })
         }
         console.log(idList)

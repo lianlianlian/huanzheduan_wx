@@ -21,8 +21,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    page: 0,
-    tribuneList: []
+    page: 0
   },
 
   /**

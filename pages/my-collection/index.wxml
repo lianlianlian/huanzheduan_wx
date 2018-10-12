@@ -1,6 +1,6 @@
 <!--pages/my-collection/index.wxml-->
 <view class='container'>
-  <my-tabs nav="{{nav}}" bind:tabNav="tabNav" bind:edit="edit" isEdit="{{true}}"></my-tabs>
+  <my-tabs id="tabs" nav="{{nav}}" bind:tabNav="tabNav" bind:edit="edit" isEdit="{{true}}" list="{{navIndex === 0 ? msgList : navIndex === 1 ? videoList : blogList}}"></my-tabs>
   <view class='wrap' wx:if="{{navIndex === 0}}">
     <view class='list'>
       <block wx:for="{{msgList}}" wx:key="index">

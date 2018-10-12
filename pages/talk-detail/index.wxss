@@ -2,11 +2,13 @@
 .group {
   background: #fff;
 }
-.top{
-  padding: 25rpx 35rpx;
+.box{
+  padding-left: 35rpx;
+  padding-right: 35rpx;
+  padding-bottom: 25rpx;
 }
-.bottom {
-  padding: 0 35rpx 20rpx;
+.top{
+  padding-top: 25rpx;
 }
 .title{
   font-size: 18px;

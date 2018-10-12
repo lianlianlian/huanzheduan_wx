@@ -5,6 +5,8 @@ Component({
    */
   properties: {
     nav: Array,
+    list: Array,
+    editStatus: Boolean,
     isEdit: Boolean
   },
 
@@ -22,12 +24,12 @@ Component({
   methods: {
     nav(e) {
       const index = e.currentTarget.dataset.index
+      let { status} = this.data
 
       this.setData({
         navIndex: index,
         status: false
       })
-      this.triggerEvent('edit', false)
       this.triggerEvent('tabNav', index)
     },
     edit() {
@@ -36,6 +38,12 @@ Component({
       this.setData({
         status: !status
       })
+    },
+    _edit() {
+      let { status, list } = this.data
+      if (list.length <= 0) return false
+
+      this.edit()
       this.triggerEvent('edit', !status)
     }
   }

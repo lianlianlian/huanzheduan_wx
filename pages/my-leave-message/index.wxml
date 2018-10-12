@@ -1,14 +1,28 @@
 <!--pages/my-leave-message/index.wxml-->
 <view class='container'>
   <my-tabs nav="{{nav}}" id="my-nav" bind:tabNav="tabNav"></my-tabs>
-  <view class='list group' wx:if="{{navIndex == 0}}">
-    <block wx:for="{{classList}}" wx:key="index">
-      <comment-item item="{{item}}"></comment-item>
-    </block>
+  <view class='wrap' wx:if="{{navIndex == 0}}">
+    <view class='list group'>
+      <block wx:for="{{classList}}" wx:key="index">
+        <comment-item item="{{item}}"></comment-item>
+      </block>
+    </view>
+    <view class='overflow-hidden' wx:if="{{classList.length === 0}}">
+      <view class="weui-loadmore weui-loadmore_line">
+          <view class="weui-loadmore__tips weui-loadmore__tips_in-line">暂无数据</view>
+      </view>
+    </view>
   </view>
-  <view class='list group' wx:else>
-    <block wx:for="{{talkList}}" wx:key="index">
-      <comment-item item="{{item}}"></comment-item>
-    </block>
+  <view class='wrap' wx:if="{{navIndex == 1}}">
+    <view class='list group'>
+      <block wx:for="{{talkList}}" wx:key="index">
+        <comment-item item="{{item}}"></comment-item>
+      </block>
+    </view>
+    <view class='overflow-hidden' wx:if="{{talkList.length === 0}}">
+      <view class="weui-loadmore weui-loadmore_line">
+          <view class="weui-loadmore__tips weui-loadmore__tips_in-line">暂无数据</view>
+      </view>
+    </view>
   </view>
 </view>
